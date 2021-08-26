@@ -1,7 +1,6 @@
 from .db import db
 from flask import jsonify
 from datetime import datetime
-from .like import likes
 from .user import User
 
 
@@ -14,7 +13,7 @@ class Bookmark(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.now)
 
     users = db.relationship('User', back_populates="bookmarks")
-    events = db.Relationship('Events', back_populates="events")
+    events = db.relationship('Events', back_populates="bookmarks")
 
     def to_dict(self):
         user = User.query.filter(User.id == self.user_id).first()
