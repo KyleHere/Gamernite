@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, NavLink } from 'react-router-dom';
 import { login } from '../../store/session';
 import './Login-Signup.css'
 
@@ -62,6 +62,13 @@ const LoginForm = () => {
             onChange={updatePassword}
           />
           <button className="login_button" type='submit'>Login</button>
+        </div>
+
+        <div>
+          <p>Don't have an account?   </p>
+          <NavLink className="signup_button" to="/sign-up">
+            Sign up
+          </NavLink>
         </div>
       </form>
     </div>
