@@ -14,6 +14,7 @@ class Bookmark(db.Model):
 
     users = db.relationship('User', back_populates="bookmarks")
     events = db.relationship('Event', back_populates="bookmarks")
+    # bookmarks = db.relationship('Bookmark', back_populates="bookmarks")
 
     def to_dict(self):
         user = User.query.filter(User.id == self.user_id).first()

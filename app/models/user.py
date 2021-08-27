@@ -11,9 +11,9 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
 
-    bookmarks = db.relationship('Bookmarks', back_populates="users")
-    events = db.relationship('Events', back_populates="users")
-    tickets = db.relationship('Tickets', back_populates="users")
+    bookmarks = db.relationship('Bookmark', back_populates="users")
+    events = db.relationship('Event', back_populates="users")
+    tickets = db.relationship('Ticket', back_populates="users")
 
     @property
     def password(self):
