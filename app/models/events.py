@@ -10,14 +10,16 @@ class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(500), nullable=False)
-    time = db.Column(db.DateTime, default=datetime.now)
+    time = db.Column(db.String(10), nullable=False)
     price = db.Column(db.String(10), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     pic_url = db.Column(db.String(255), nullable=False)
     location = db.Column(db.String(255), nullable=False)
     timestamp = db.Column(db.DateTime, default=datetime.now)
 
-    # bookmarks = db.relationship('Bookmarks', back_populates="bookmarks")
+    bookmarks = db.relationship('Bookmark', back_populates="events")
+    users = db.relationship('User', back_populates="events")
+    tickets = db.relationship('Ticket', back_populates="events")
 
     def to_dict(self):
         user = User.query.filter(User.id == self.user_id).first()

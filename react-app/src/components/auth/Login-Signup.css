@@ -43,3 +43,8 @@
   align-items: flex-start;
   /* align-content: ; */
 }
+
+.signup_button{
+  display: flex;
+  justify-content: center;
+}
