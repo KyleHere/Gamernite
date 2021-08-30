@@ -40,3 +40,33 @@ def create_event():
         return new_event.to_dict()
 
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+
+
+@event_routes.route('/<int:id>', methods=['PUT'])
+@login_required
+def update_event(id):
+    event = Event.query.get(id)
+    form = CreateEventForm()
+
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form.validate_on_submit():
+        data = form.data
+        event.name = data['name']
+        event.time = data['time']
+        event.price = data['price']
+        event.location = data['location']
+        event.pic_url = data['pic_url']
+        event.description = data['description']
+
+    db.session.commit()
+    return event.to_dict()
+
+
+@event_routes.route('/<int:id>', methods=["DELETE"])
+@login_required
+def delete_event(id):
+    event = Event.query.get(id)
+    db.session.delete(event)
+    db.session.commit()
+
+    return jsonify("Delete successful")

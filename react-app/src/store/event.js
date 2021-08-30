@@ -2,6 +2,7 @@ const GET_EVENTS = 'events/GET_EVENTS'
 const CREATE_EVENT = 'events/CREATE_EVENT'
 const UPDATE_ONE = 'events/UPDATE_ONE'
 const DELETE_ONE = 'events/DELETE_ONE'
+const GET_ONE = 'events/GET_ONE'
 
 const getEvents = (events) => ({
   type: GET_EVENTS,
@@ -23,6 +24,11 @@ const deleteOne = (id) => ({
   id
 })
 
+const getOneEventThunk = (id) => ({
+  type: GET_ONE,
+  id
+})
+
 export const allEvents = () => async dispatch => {
   const res = await fetch(`/api/events`)
   if (res.ok) {
@@ -31,6 +37,17 @@ export const allEvents = () => async dispatch => {
     return events
   }
   return res
+}
+
+export const getOneEvent = (id) => async dispatch => {
+  const res = await fetch(`/api/events/${id}`)
+
+  if (res.ok) {
+    const oneEvent = await res.json()
+    dispatch(getOneEventThunk(oneEvent))
+    return oneEvent
+  }
+
 }
 
 export const createNewEvent = (payload) => async dispatch => {
@@ -42,14 +59,13 @@ export const createNewEvent = (payload) => async dispatch => {
 
   if (res.ok) {
     const data = await res.json();
-    console.log('THIS IS MY DATA ===================================', data)
     await dispatch(createEvent(payload))
     return data
   }
 }
 
-export const updateEvent = (payload) => async dispatch => {
-  const res = await fetch(`/api/events/${payload.id}`, {
+export const updateEvent = (payload, id) => async dispatch => {
+  const res = await fetch(`/api/events/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
@@ -69,9 +85,9 @@ export const deleteEvent = (id) => async dispatch => {
   })
 
   if (res.ok) {
-    const deleted = await res.json();
+    // const deleted = await res.json();
     dispatch(deleteOne(id))
-    return deleted
+    return res
   }
 }
 
@@ -90,7 +106,7 @@ export default function eventsReducer(state = initialState, action) {
     }
     case UPDATE_ONE: {
       //DOESNT WORK
-      const updatedState = { ...state, [action.payload.id]: action.payload }
+      const updatedState = { ...state, [action.id]: action.payload }
       return updatedState
     }
     case DELETE_ONE: {
@@ -98,6 +114,9 @@ export default function eventsReducer(state = initialState, action) {
 
       delete afterState[action.id]
       return afterState
+    }
+    case GET_ONE: {
+      return { ...state }
     }
     default:
       return state;

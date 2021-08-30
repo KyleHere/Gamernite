@@ -1,12 +1,12 @@
 # from itertools import Predicate
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, DateField
+from wtforms import StringField, IntegerField, DateField, TextField
 from wtforms.validators import DataRequired, ValidationError
 
 
 class CreateEventForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
-    description = StringField('Description', validators=[DataRequired()])
+    description = TextField('Description', validators=[DataRequired()])
     time = StringField('Time', validators=[DataRequired()])
     price = StringField('Price', validators=[DataRequired()])
     location = StringField('Location', validators=[DataRequired()])

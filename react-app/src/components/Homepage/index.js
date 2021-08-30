@@ -19,7 +19,9 @@ const Homepage = () => {
       {events?.map(event =>
       (<div key={event.id}>
         <div>
-          <p> {event.name} </p>
+          <Link to={`/events/${event.id}`}>
+            <p> {event.name} </p>
+          </Link>
         </div>
       </div>))}
     </div>

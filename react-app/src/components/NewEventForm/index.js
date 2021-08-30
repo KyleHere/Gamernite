@@ -31,7 +31,7 @@ const NewEventForm = () => {
       location,
       pic_url
     }
-    
+
     dispatch(createNewEvent(payload)) //needs an id to update
 
     history.push("/")
@@ -52,17 +52,6 @@ const NewEventForm = () => {
             placeholder="Name of Event"
             onChange={(e) => setName(e.target.value)}
             value={name}
-            required>
-          </input>
-        </div>
-
-        <div className="input_containers">
-          <input
-            type="text"
-            className="input"
-            placeholder="Description"
-            onChange={(e) => setDescription(e.target.value)}
-            value={description}
             required>
           </input>
         </div>
@@ -110,6 +99,18 @@ const NewEventForm = () => {
             required>
           </input>
         </div>
+
+        <div className="input_containers">
+          <textarea
+            type="text"
+            className="input"
+            placeholder="Description"
+            onChange={(e) => setDescription(e.target.value)}
+            value={description}
+            required>
+          </textarea>
+        </div>
+
         <button className="create-button" type="submit">
           Create
         </button>
