@@ -34,7 +34,7 @@ export const allEvents = () => async dispatch => {
 }
 
 export const createNewEvent = (payload) => async dispatch => {
-  const res = await fetch('/api/events', {
+  const res = await fetch('/api/events/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
@@ -42,6 +42,7 @@ export const createNewEvent = (payload) => async dispatch => {
 
   if (res.ok) {
     const data = await res.json();
+    console.log('THIS IS MY DATA ===================================', data)
     await dispatch(createEvent(payload))
     return data
   }
@@ -56,7 +57,7 @@ export const updateEvent = (payload) => async dispatch => {
 
   if (res.ok) {
     const data = await res.json();
-    console.log('THIS IS MY DATA ===================================', data)
+
     await dispatch(update(payload))
     return data;
   }

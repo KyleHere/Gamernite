@@ -28,7 +28,7 @@ def create_event():
         new_event = Event(
             user_id=user.id,
             name=data['name'],
-            desciption=data['description'],
+            description=data['description'],
             time=data['time'],
             price=data['price'],
             location=data['location'],
