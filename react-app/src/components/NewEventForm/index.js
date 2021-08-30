@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
-
+import { createNewEvent } from "../../store/event";
 
 const NewEventForm = () => {
   const [name, setName] = useState("");
@@ -22,7 +22,17 @@ const NewEventForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //dispatch action creator
+
+    const payload = {
+      name,
+      description,
+      time,
+      price,
+      location,
+      pic_url
+    }
+    
+    dispatch(createNewEvent(payload)) //needs an id to update
 
     history.push("/")
   }
@@ -113,3 +123,5 @@ const NewEventForm = () => {
     </div>
   )
 }
+
+export default NewEventForm
