@@ -4,8 +4,10 @@ import { Link, NavLink } from "react-router-dom"
 import { allEvents } from '../../store/event'
 
 const Homepage = () => {
-  const dispatch = useDispatch();
+  const user = useSelector(state => state.session.user)
+  const events = useSelector(state => Object.values(state.eventsReducer))
 
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(allEvents())
@@ -14,7 +16,14 @@ const Homepage = () => {
   return (
     <div>
       <h2>Homepage Text</h2>
-
+      {events?.map(event =>
+      (<div key={event.id}>
+        <div>
+          <Link to={`/events/${event.id}`}>
+            <p> {event.name} </p>
+          </Link>
+        </div>
+      </div>))}
     </div>
   )
 }

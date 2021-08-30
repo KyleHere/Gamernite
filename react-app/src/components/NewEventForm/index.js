@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
-
+import { createNewEvent } from "../../store/event";
 
 const NewEventForm = () => {
   const [name, setName] = useState("");
@@ -22,7 +22,17 @@ const NewEventForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //dispatch action creator
+
+    const payload = {
+      name,
+      description,
+      time,
+      price,
+      location,
+      pic_url
+    }
+
+    dispatch(createNewEvent(payload)) //needs an id to update
 
     history.push("/")
   }
@@ -42,17 +52,6 @@ const NewEventForm = () => {
             placeholder="Name of Event"
             onChange={(e) => setName(e.target.value)}
             value={name}
-            required>
-          </input>
-        </div>
-
-        <div className="input_containers">
-          <input
-            type="text"
-            className="input"
-            placeholder="Description"
-            onChange={(e) => setDescription(e.target.value)}
-            value={description}
             required>
           </input>
         </div>
@@ -100,6 +99,18 @@ const NewEventForm = () => {
             required>
           </input>
         </div>
+
+        <div className="input_containers">
+          <textarea
+            type="text"
+            className="input"
+            placeholder="Description"
+            onChange={(e) => setDescription(e.target.value)}
+            value={description}
+            required>
+          </textarea>
+        </div>
+
         <button className="create-button" type="submit">
           Create
         </button>
@@ -113,3 +124,5 @@ const NewEventForm = () => {
     </div>
   )
 }
+
+export default NewEventForm
