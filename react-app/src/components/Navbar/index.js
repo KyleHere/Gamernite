@@ -25,7 +25,10 @@ const NavBar = () => {
         </div>
       }
       {user ?
-        <LogoutButton />
+        <div>
+          <NavLink to="/new-event">Upload</NavLink>
+          <LogoutButton />
+        </div>
         : ""}
     </div>
   );
