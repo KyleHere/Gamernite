@@ -30,7 +30,7 @@ const getOneEventThunk = (id) => ({
 })
 
 export const allEvents = () => async dispatch => {
-  const res = await fetch(`/api/events`)
+  const res = await fetch(`/api/events/`)
   if (res.ok) {
     const events = await res.json()
     dispatch(getEvents(events))
