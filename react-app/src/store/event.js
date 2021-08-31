@@ -14,9 +14,10 @@ const createEvent = (payload) => ({
   payload
 })
 
-const update = (payload) => ({
+const update = (payload, id) => ({
   type: UPDATE_ONE,
-  payload
+  payload,
+  id
 })
 
 const deleteOne = (id) => ({
@@ -76,7 +77,7 @@ export const updateEvent = (payload, id) => async dispatch => {
   if (res.ok) {
     const data = await res.json();
 
-    await dispatch(update(payload))
+    await dispatch(update(data, id))
     return data;
   }
 }
@@ -113,7 +114,8 @@ export default function eventsReducer(state = initialState, action) {
     }
     case UPDATE_ONE: {
       //DOESNT WORK
-      const updatedState = { ...state, [action.id]: action.payload }
+      let updatedState = { ...state }
+      updatedState[action.id] = action.payload
       return updatedState
     }
     case DELETE_ONE: {
