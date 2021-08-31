@@ -16,9 +16,13 @@ const EventDetails = () => {
   console.log(events)
   const thisEvent = events?.find((event) => event.id === +eventId)
 
+  const openModal = () => {
+    setShowEditEvent(!showEditEvent)
+  }
+
   useEffect(() => {
     dispatch(allEvents())
-  }, [])
+  }, [showEditEvent])
 
 
 
@@ -36,7 +40,7 @@ const EventDetails = () => {
       <div className="edit_button_div">
         {showEditEvent && (
           <Modal className='edit_modal' onClose={() => setShowEditEvent(false)}>
-            <EditEventForm setShowEditEvent={setShowEditEvent} id={eventId} />
+            <EditEventForm openModal={openModal} />
           </Modal>
         )}
         <button

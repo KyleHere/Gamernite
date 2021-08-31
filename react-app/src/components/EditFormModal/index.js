@@ -5,7 +5,7 @@ import { useHistory, useParams } from "react-router";
 import { deleteEvent, updateEvent } from "../../store/event";
 import './EditFormModal.css'
 
-function EditEventForm(id, setShowEditEvent) {
+function EditEventForm({ openModal }) {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -27,6 +27,8 @@ function EditEventForm(id, setShowEditEvent) {
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
 
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -42,14 +44,15 @@ function EditEventForm(id, setShowEditEvent) {
     let editedEvent = await dispatch(updateEvent(payload, eventId))
 
     if (editedEvent) {
-      setShowEditEvent(false)
+      // setShowEditEvent(false)
+      openModal()
       history.push(`/events/${eventId}`)
     }
 
   }
 
   const handleDelete = async () => {
-    setShowEditEvent(false)
+    openModal()
     let deleted = await dispatch(deleteEvent(eventId))
 
     if (deleted) {
