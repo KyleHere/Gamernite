@@ -35,6 +35,7 @@ body{
 
 .event_card{
   text-decoration: none;
+  color:black
 }
 
 .event_card:visited{
