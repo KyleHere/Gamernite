@@ -3,9 +3,33 @@
   border-bottom: 1px solid rgba(128, 128, 128, 0.384);
   height: 60px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   top: 0px;
   width: 100%;
 
+}
+
+.logo_img{
+  height:35px;
+}
+
+.left_navbar{
+  padding-left: 15px;
+}
+
+.right_navbar{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.profile_img{
+  /* padding-top: ; */
+  height:30px;
+  border:1px white solid;
+  border-radius: 20px;
+  /* padding-right: 10px; */
 }
