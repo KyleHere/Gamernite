@@ -11,9 +11,12 @@ const NavBar = () => {
 
   return (
     <div className='navbar_container'>
-      <NavLink to='/' exact={true} activeClassName='active'>
-        Home
-      </NavLink>
+      <div className="left_navbar">
+        <NavLink to='/' exact={true} activeClassName='active'>
+          <img className="logo_img" src="https://i.imgur.com/eo82st8.png" />
+        </NavLink>
+      </div>
+      <div></div>
       {user ? "" :
         <div>
           <NavLink to='/login' exact={true} activeClassName='active'>
@@ -24,12 +27,20 @@ const NavBar = () => {
           </button> */}
         </div>
       }
-      {user ?
-        <div>
-          <NavLink to="/new-event">Upload</NavLink>
-          <LogoutButton />
-        </div>
-        : ""}
+      <div >
+        {user ?
+          <div className="right_navbar">
+            <NavLink className="upload_link" to="/new-event">Upload</NavLink>
+
+            <NavLink to="/profile">
+              {/* Try to implement a dropdown for the profile logo */}
+              <img className="profile_img" src="https://i.imgur.com/72dKGdN.png" />
+            </NavLink>
+
+            <LogoutButton />
+          </div>
+          : ""}
+      </div>
     </div>
   );
 }
