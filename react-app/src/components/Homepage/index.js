@@ -12,7 +12,7 @@ const Homepage = () => {
   useEffect(() => {
     dispatch(allEvents())
   }, [])
-
+  
   return (
     <div>
       <h2>Homepage Text</h2>
