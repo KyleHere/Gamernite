@@ -51,13 +51,16 @@ function EditEventForm({ openModal }) {
 
   }
 
-  const handleDelete = async () => {
+  const handleDelete = () => {
     openModal()
-    let deleted = await dispatch(deleteEvent(eventId))
-
-    if (deleted) {
-      history.push('/')
-    }
+    dispatch(deleteEvent(eventId))
+      .then(() => {
+        return history.push('/')
+      })
+    // console.log('DELETED------', deleted)
+    // if (deleted) {
+    //   history.push('/')
+    // }
   }
 
   return (
@@ -79,7 +82,7 @@ function EditEventForm({ openModal }) {
         </div>
         <div >
           <label>Location</label>
-          <input type="text" className="form_inputs" value={location} placeholder='Location' onChange={(e) => setName(e.target.value)} />
+          <input type="text" className="form_inputs" value={location} placeholder='Location' onChange={(e) => setLocation(e.target.value)} />
         </div>
         <div >
           <label>Picture URL</label>
