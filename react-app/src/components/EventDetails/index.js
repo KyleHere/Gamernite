@@ -15,7 +15,7 @@ const EventDetails = () => {
   const [showTicket, setShowTicket] = useState(false)
 
   const events = useSelector(state => Object.values(state.eventsReducer))
-  console.log(events)
+  // console.log(events)
   const thisEvent = events?.find((event) => event.id === +eventId)
 
   const openModal = () => {
