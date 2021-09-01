@@ -16,9 +16,9 @@ const NewEventForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  // if(!user){
-  //   return <Redirect to="/login"/>
-  // }
+  if (!user) {
+    return <Redirect to="/login" />
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();

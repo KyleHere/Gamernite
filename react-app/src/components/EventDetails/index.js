@@ -5,12 +5,14 @@ import { allEvents } from "../../store/event";
 
 import { Modal } from "../../context/Modal";
 import EditEventForm from "../EditFormModal";
+import RegisterTicketForm from "../RegisterTicket";
 
 const EventDetails = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const { eventId } = useParams();
   const [showEditEvent, setShowEditEvent] = useState(false)
+  const [showTicket, setShowTicket] = useState(false)
 
   const events = useSelector(state => Object.values(state.eventsReducer))
   console.log(events)
@@ -18,6 +20,10 @@ const EventDetails = () => {
 
   const openModal = () => {
     setShowEditEvent(!showEditEvent)
+  }
+
+  const openTicketModal = () => {
+    setShowTicket(!showTicket)
   }
 
   useEffect(() => {
@@ -49,6 +55,14 @@ const EventDetails = () => {
         >
           Edit Event
         </button>
+      </div>
+      <div>
+        {showTicket && (
+          <Modal onClose={() => setShowTicket(false)}>
+            <RegisterTicketForm openTicketModal={openTicketModal} />
+          </Modal>
+        )}
+        <button onClick={() => setShowTicket(true)}>Register</button>
       </div>
     </div>
   )

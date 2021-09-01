@@ -32,7 +32,7 @@ const Homepage = () => {
                 <p className="event_p"> {event.time} </p>
                 <p className="event_p"> {event.location} </p>
                 <p className="event_p"> Starts at ${event.price} </p>
-                {/* </Link> */} 
+                {/* </Link> */}
               </div>
             </div>
           </Link>))}
