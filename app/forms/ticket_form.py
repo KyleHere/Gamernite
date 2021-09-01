@@ -5,4 +5,5 @@ from app.models import User
 
 
 class TicketForm(FlaskForm):
-    numTicket = IntegerField('Number of Tickets', validators=[DataRequired()])
+    num_ticket = IntegerField('Number of Tickets', validators=[DataRequired()])
+    event_id = IntegerField('EventId', validators=[DataRequired()])

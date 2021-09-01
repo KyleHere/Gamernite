@@ -20,9 +20,6 @@ const TicketsPage = () => {
     dispatch(allTickets())
   }, [])
 
-
-
-
   return (
     <div className="ticket_container">
       <h2>Text</h2>

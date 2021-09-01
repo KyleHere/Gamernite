@@ -25,8 +25,11 @@ def create_ticket():
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         data = form.data
+        # print('DATA============', data)
         new_ticket = Ticket(
-            num_ticket=data['numTicket'],
+            user_id=user.id,
+            event_id=data['event_id'],
+            num_ticket=data['num_ticket'],
         )
 
         db.session.add(new_ticket)
