@@ -12,6 +12,7 @@ import NewEventForm from './components/NewEventForm';
 
 import Homepage from './components/Homepage'
 import EventDetails from './components/EventDetails';
+import TicketsPage from './components/TicketsPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -52,6 +53,9 @@ function App() {
         </Route>
         <Route path='/events/:eventId' exact={true}>
           <EventDetails />
+        </Route>
+        <Route path='/tickets/:userId' exact={true}>
+          <TicketsPage />
         </Route>
       </Switch>
     </BrowserRouter>
