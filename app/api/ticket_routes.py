@@ -5,7 +5,7 @@ from flask import Blueprint, request, jsonify
 from flask_login import current_user, login_required
 from datetime import datetime, time
 from .auth_routes import validation_errors_to_error_messages
-from ..forms.event_form import CreateEventForm
+from ..forms.ticket_form import TicketForm
 
 ticket_routes = Blueprint('tickets', __name__)
 
@@ -15,3 +15,22 @@ ticket_routes = Blueprint('tickets', __name__)
 def get_tickets():
     tickets = Ticket.query.all()
     return {ticket.id: ticket.to_dict() for ticket in tickets}
+
+
+@ticket_routes.route('/', methods=['POST'])
+@login_required
+def create_ticket():
+    user = current_user
+    form = TicketForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    if form.validate_on_submit():
+        data = form.data
+        new_ticket = Ticket(
+            num_ticket=data['numTicket'],
+        )
+
+        db.session.add(new_ticket)
+        db.session.commit()
+        return new_ticket.to_dict()
+
+    return {'errors': validation_errors_to_error_messages(form.errors)}, 401

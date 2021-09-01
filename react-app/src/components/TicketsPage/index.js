@@ -12,7 +12,7 @@ const TicketsPage = () => {
   const user = useSelector(state => state.session.user)
   const tickets = useSelector(state => Object.values(state.ticketsReducer))
   const events = useSelector(state => Object.values(state.eventsReducer))
-  
+
   const filtered = tickets.filter((ticket) => ticket.user_id === user.id)
   // console.log(filtered)
 
@@ -27,11 +27,12 @@ const TicketsPage = () => {
     <div className="ticket_container">
       <h2>Text</h2>
       {filtered?.map(ticket =>
-      (<div>
+      (
         <div>
-          <p></p>
-        </div>
-      </div>))}
+          <div>
+            <p>{ticket.id}</p>
+          </div>
+        </div>))}
     </div>
   )
 }

@@ -33,6 +33,7 @@ export const createTicket = (payload) => async dispatch => {
     await dispatch(newTicket(data))
     return data
   }
+  // return res
 }
 
 const initialState = {};
