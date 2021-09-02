@@ -2,7 +2,8 @@ import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { Link, NavLink } from "react-router-dom"
 import { useHistory } from "react-router"
-import { allTickets } from "../../store/ticket"
+import { allTickets, deleteOneTicket } from "../../store/ticket"
+
 
 import './TicketsPage.css'
 
@@ -28,6 +29,7 @@ const TicketsPage = () => {
         <div>
           <div>
             <p>{ticket.id}</p>
+            <button>Remove Ticket</button>
           </div>
         </div>))}
     </div>

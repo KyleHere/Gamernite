@@ -1,6 +1,6 @@
 const GET_TICKETS = 'tickets/GET_TICKETS'
 const CREATE_TICKET = 'tickets/CREATE_TICKET'
-
+const DELETE_ONE = 'tickets/DELETE_ONE'
 
 const getTickets = (tickets) => ({
   type: GET_TICKETS,
@@ -10,6 +10,11 @@ const getTickets = (tickets) => ({
 const newTicket = (payload) => ({
   type: CREATE_TICKET,
   payload
+})
+
+const deleteTicket = (id) => ({
+  type: DELETE_ONE,
+  id
 })
 
 export const allTickets = () => async dispatch => {
@@ -37,6 +42,16 @@ export const createTicket = (payload) => async dispatch => {
 }
 
 const initialState = {};
+
+export const deleteOneTicket = (id) => async dispatch => {
+  const res = await fetch(`/api/tickets/${id}`, {
+    method: 'DELETE'
+  })
+  if (res.ok) {
+    dispatch(deleteTicket(id))
+    return res
+  }
+}
 
 export default function ticketsReducer(state = initialState, action) {
   switch (action.type) {
