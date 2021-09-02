@@ -32,8 +32,8 @@ const NewEventForm = () => {
       pic_url
     }
 
-    dispatch(createNewEvent(payload)) //needs an id to update
-
+    await dispatch(createNewEvent(payload)) //needs an id to update
+    debugger
     history.push("/")
   }
 

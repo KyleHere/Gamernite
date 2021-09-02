@@ -17,7 +17,7 @@ class Ticket(db.Model):
     events = db.relationship('Event', back_populates="tickets")
 
     def to_dict(self):
-        user = User.query.filter(User.id == self.user_id).first()
+        user = User.query.get(self.user_id)
 
         return {
             'id': self.id,
