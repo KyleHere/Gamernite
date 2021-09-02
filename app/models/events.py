@@ -23,7 +23,6 @@ class Event(db.Model):
 
     def to_dict(self):
         user = User.query.filter(User.id == self.user_id).first()
-
         return {
             'id': self.id,
             'user_id': self.user_id,

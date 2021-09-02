@@ -8,7 +8,7 @@ import './homepage.css'
 const Homepage = () => {
   const user = useSelector(state => state.session.user)
   const events = useSelector(state => Object.values(state.eventsReducer))
-
+  // const tickets = useSelector(state => Object.values(state.ticketsReducer))
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Homepage = () => {
                 <p className="event_p"> {event.time} </p>
                 <p className="event_p"> {event.location} </p>
                 <p className="event_p"> Starts at ${event.price} </p>
-                {/* </Link> */} 
+                {/* </Link> */}
               </div>
             </div>
           </Link>))}

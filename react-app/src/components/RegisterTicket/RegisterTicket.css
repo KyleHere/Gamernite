@@ -1,0 +1,13 @@
+.ticket_h3{
+padding-left: 30px;
+}
+
+.ticket_input {
+  padding-left: 50px;
+}
+
+.ticket_form_buttons{
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}

@@ -16,9 +16,9 @@ const NewEventForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  // if(!user){
-  //   return <Redirect to="/login"/>
-  // }
+  if (!user) {
+    return <Redirect to="/login" />
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -32,8 +32,8 @@ const NewEventForm = () => {
       pic_url
     }
 
-    dispatch(createNewEvent(payload)) //needs an id to update
-
+    await dispatch(createNewEvent(payload)) //needs an id to update
+    debugger
     history.push("/")
   }
 
