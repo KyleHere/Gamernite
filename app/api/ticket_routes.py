@@ -43,6 +43,7 @@ def create_ticket():
 @login_required
 def delete_ticket(id):
     ticket = Ticket.query.get(id)
+
     db.session.delete(ticket)
     db.session.commit()
 

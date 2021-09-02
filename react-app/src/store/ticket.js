@@ -48,7 +48,8 @@ export const deleteOneTicket = (id) => async dispatch => {
     method: 'DELETE'
   })
   if (res.ok) {
-    dispatch(deleteTicket(id))
+    const data = await res.json();
+    await dispatch(deleteTicket(data))
     return res
   }
 }

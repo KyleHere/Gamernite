@@ -9,6 +9,7 @@ import './TicketsPage.css'
 
 const TicketsPage = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const user = useSelector(state => state.session.user)
   const tickets = useSelector(state => Object.values(state.ticketsReducer))
@@ -21,6 +22,18 @@ const TicketsPage = () => {
     dispatch(allTickets())
   }, [])
 
+  const handleDelete = async (id) => {
+    // openModal()
+    dispatch(deleteOneTicket(id))
+      .then(() => {
+        return history.push(`/tickets/${user.id}`)
+      })
+
+    // await dispatch(deleteOneTicket(id))
+
+    // history.push(`/tickets/${user.id}`)
+  }
+
   return (
     <div className="ticket_container">
       <h2>Text</h2>
@@ -29,7 +42,7 @@ const TicketsPage = () => {
         <div>
           <div>
             <p>{ticket.id}</p>
-            <button>Remove Ticket</button>
+            <button onClick={handleDelete(ticket.id)}>Remove Ticket</button>
           </div>
         </div>))}
     </div>
