@@ -37,3 +37,13 @@ def create_ticket():
         return new_ticket.to_dict()
 
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
+
+
+@ticket_routes.route('/<int:id>', methods=['DELETE'])
+@login_required
+def delete_ticket(id):
+    ticket = Ticket.query.get(id)
+    db.session.delete(ticket)
+    db.session.commit()
+
+    return jsonify("Delete Ticket Success")
