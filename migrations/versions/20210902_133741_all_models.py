@@ -1,8 +1,8 @@
-"""updated tickets
+"""all models
 
-Revision ID: 56ec29d833ca
+Revision ID: 69c7f5498191
 Revises: 
-Create Date: 2021-09-02 13:34:29.592405
+Create Date: 2021-09-02 13:37:41.741965
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '56ec29d833ca'
+revision = '69c7f5498191'
 down_revision = None
 branch_labels = None
 depends_on = None
