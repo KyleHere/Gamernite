@@ -7,12 +7,20 @@ from datetime import datetime, time
 from .auth_routes import validation_errors_to_error_messages
 from ..forms.ticket_form import TicketForm
 
+
 ticket_routes = Blueprint('tickets', __name__)
 
 
 @ticket_routes.route('/', methods=['GET'])
 @login_required
 def get_tickets():
+    tickets = Ticket.query.all()
+    return {ticket.id: ticket.to_dict() for ticket in tickets}
+
+
+@ticket_routes.route('/<int:userId>', methods=['GET'])
+@login_required
+def get_user_tickets(userId):
     tickets = Ticket.query.all()
     return {ticket.id: ticket.to_dict() for ticket in tickets}
 
@@ -43,8 +51,10 @@ def create_ticket():
 @login_required
 def delete_ticket(id):
     ticket = Ticket.query.get(id)
-
-    db.session.delete(ticket)
-    db.session.commit()
+    if ticket:
+        db.session.delete(ticket)
+        db.session.commit()
+    else:
+        return "The ticket you are trying to delete doesn't exist", 400
 
     return jsonify("Delete Ticket Success")
