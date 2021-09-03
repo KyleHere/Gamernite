@@ -33,7 +33,7 @@ const NavBar = () => {
             <div className="right_navbar">
               <NavLink className="upload_link" to="/new-event">Upload</NavLink>
 
-              <NavLink to="/profile">
+              <NavLink to={`/tickets/${user.id}`}>
                 {/* Try to implement a dropdown for the profile logo */}
                 <img className="profile_img" src="https://i.imgur.com/72dKGdN.png" />
               </NavLink>

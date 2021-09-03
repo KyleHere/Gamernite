@@ -32,7 +32,7 @@ const RegisterTicketForm = () => {
       num_ticket
     }
 
-    dispatch(createTicket(payload))
+    await dispatch(createTicket(payload))
 
     history.push(`/tickets/${user_id}`)
   }
