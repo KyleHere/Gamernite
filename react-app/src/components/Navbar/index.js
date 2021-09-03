@@ -17,18 +17,26 @@ const NavBar = () => {
             <img className="logo_img" src="https://i.imgur.com/eo82st8.png" />
           </NavLink>
         </div>
-        <div></div>
-        {user ? "" :
-          <div>
-            <NavLink to='/login' exact={true} activeClassName='active'>
-              Login
-            </NavLink>
-            {/* <button to='/sign-up' exact={true} activeClassName='active'>
-              Sign Up
-            </button> */}
-          </div>
-        }
+
+
+
         <div >
+
+          {user ? "" :
+            <div className="signed_out">
+              <NavLink to='/login' exact={true} activeClassName="active">
+                <div className="login_navbar">
+                  Login
+                </div>
+              </NavLink>
+              <NavLink to='/sign-up' exact={true} activeClassName="active">
+                <div className="signup_navbar">
+                  Sign Up
+                </div>
+              </NavLink>
+            </div>
+          }
+
           {user ?
             <div className="right_navbar">
               <NavLink className="upload_link" to="/new-event">Upload</NavLink>
