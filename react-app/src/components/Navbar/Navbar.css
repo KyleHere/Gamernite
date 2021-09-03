@@ -32,6 +32,22 @@
   justify-content: space-evenly;
 }
 
+.upload_button{
+  padding: 10px;
+  background-color:white;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  min-width: 50px;
+  text-align: center;
+  /* margin-right: 15px; */
+}
+
+.upload_button:hover{
+  background-color: lightgray;
+}
 
 .profile_img{
   /* padding-top: ; */

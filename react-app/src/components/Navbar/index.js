@@ -39,9 +39,13 @@ const NavBar = () => {
 
           {user ?
             <div className="right_navbar">
-              <NavLink className="upload_link" to="/new-event">Upload</NavLink>
+              <NavLink activeClassName="active" to="/new-event">
+                <div className="upload_button">
+                  Upload
+                </div>
+              </NavLink>
 
-              <NavLink to="/profile">
+              <NavLink to="/profile" >
                 {/* Try to implement a dropdown for the profile logo */}
                 <img className="profile_img" src="https://i.imgur.com/72dKGdN.png" />
               </NavLink>
