@@ -39,7 +39,7 @@ const TicketsPage = () => {
       <h2>Text</h2>
       {filtered?.map(ticket =>
       (
-        <div>
+        <div key={ticket.id}>
           <div>
             <p>{ticket.id}</p>
             <button onClick={() => handleDelete(ticket.id)}>Remove Ticket</button>
