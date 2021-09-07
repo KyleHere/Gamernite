@@ -1,3 +1,47 @@
+# Artygram
+
+Wiki: https://github.com/KyleHere/Gamernite
+
+Live Demo: https://gamernite.herokuapp.com/	
+
+Gamernite is an Eventbrite clone that focuses on gamers (conventions, expos and tournaments) 
+
+## Technologies
+* <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=JavaScript&logoColor=333333" /></a>
+
+* <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=Python&logoColor=white&" /></a>
+
+* <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/-React-61DAFB?logo=React&logoColor=333333" /></a>
+
+* <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://img.shields.io/badge/-CSS3-1572B6?logo=CSS3" /></a>
+
+* <a href="https://flask.palletsprojects.com/en/1.1.x/"><img alt="Flask" src="https://img.shields.io/badge/-Flask-000000?style=flat-square&logo=Flask&logoColor=white" /></a>
+
+
+* <a href="https://redux.js.org/"><img src="https://img.shields.io/badge/-Redux-764ABC?logo=Redux" /></a>
+
+* <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/-PostgreSQL-336791?logo=PostgreSQL" /></a>
+
+## Home View
+
+![homepage](https://i.imgur.com/9uH4cUA.png)
+
+## Event View
+
+![event](https://i.imgur.com/vFdoC6r.png)
+
+## Technical Details
+
+Gamernite's backend is built using Flask and it's frontend is built using React-Redux 
+
+## Features 
+
+- Signup, Login and Demo a user 
+- Creating New Events, Purhcasing Tickets
+- Event Feed
+- Ticket Feed
+
+
 # Flask React Project
 
 This is the starter for the Flask React project.
