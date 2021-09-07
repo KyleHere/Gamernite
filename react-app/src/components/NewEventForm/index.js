@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { createNewEvent } from "../../store/event";
 
+import './NewEventForm.css'
+
 const NewEventForm = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -10,6 +12,7 @@ const NewEventForm = () => {
   const [price, setPrice] = useState("");
   const [location, setLocation] = useState("");
   const [pic_url, setPicUrl] = useState("");
+  const [errors, setErrors] = useState([]);
 
   const user = useSelector((state) => state.session.user)
 
@@ -23,6 +26,31 @@ const NewEventForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (name.length === 0) {
+      setErrors(["Please enter the name of the event"])
+    }
+    else if (name.length > 50) {
+      setErrors(["Name of event must be less than 50 characters"])
+    }
+    else if (description.length === 0) {
+      setErrors(["Please describe your event"])
+    }
+    else if (time.length === 0) {
+      setErrors(["Please provide time of event [xx:xx am/pm] )"])
+    }
+    else if (price.length === 0) {
+      setErrors(["Please enter a ticket price"])
+    }
+    else if (location.length === 0) {
+      setErrors(["Please input the location of your event"])
+    }
+    // else if (location.length < 10) {
+    //   setErrors(["Length of location must be at least 10 characters"])
+    // }
+    else if (pic_url.length === 0) {
+      setErrors(["Please input a picture url"])
+    }
+
     const payload = {
       name,
       description,
@@ -32,9 +60,11 @@ const NewEventForm = () => {
       pic_url
     }
 
-    await dispatch(createNewEvent(payload)) //needs an id to update
-    debugger
-    history.push("/")
+    const created = await dispatch(createNewEvent(payload))
+
+    if (errors.length === 0 || created) {
+      history.push("/")
+    }
   }
 
   const cancel = () => {
@@ -42,9 +72,14 @@ const NewEventForm = () => {
   }
 
   return (
-    <div>
+    <div className="new_event_form_container">
       <h2>Upload a New Event</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="new_event_form" onSubmit={handleSubmit}>
+        <div>
+          {errors.map((error, ind) => (
+            <div key={ind}>{error}</div>
+          ))}
+        </div>
         <div className="input_containers">
           <input
             type="text"
@@ -52,7 +87,7 @@ const NewEventForm = () => {
             placeholder="Name of Event"
             onChange={(e) => setName(e.target.value)}
             value={name}
-            required>
+          >
           </input>
         </div>
 
@@ -63,7 +98,7 @@ const NewEventForm = () => {
             placeholder="Time of Event"
             onChange={(e) => setTime(e.target.value)}
             value={time}
-            required>
+          >
           </input>
         </div>
 
@@ -74,7 +109,7 @@ const NewEventForm = () => {
             placeholder="Price"
             onChange={(e) => setPrice(e.target.value)}
             value={price}
-            required>
+          >
           </input>
         </div>
 
@@ -85,7 +120,7 @@ const NewEventForm = () => {
             placeholder="Location"
             onChange={(e) => setLocation(e.target.value)}
             value={location}
-            required>
+          >
           </input>
         </div>
 
@@ -93,10 +128,10 @@ const NewEventForm = () => {
           <input
             type="text"
             className="input"
-            placeholder="Picture"
+            placeholder="Picture URL"
             onChange={(e) => setPicUrl(e.target.value)}
             value={pic_url}
-            required>
+          >
           </input>
         </div>
 
@@ -107,17 +142,17 @@ const NewEventForm = () => {
             placeholder="Description"
             onChange={(e) => setDescription(e.target.value)}
             value={description}
-            required>
+          >
           </textarea>
         </div>
 
-        <button className="create-button" type="submit">
+        <button className="create_button" type="submit">
           Create
         </button>
       </form>
 
       <div>
-        <button className="cancel-button" onClick={cancel}>
+        <button className="cancel_button" onClick={cancel}>
           Cancel
         </button>
       </div>

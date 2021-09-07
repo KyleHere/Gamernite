@@ -15,7 +15,7 @@ const EventDetails = () => {
   const { eventId } = useParams();
   const [showEditEvent, setShowEditEvent] = useState(false)
   const [showTicket, setShowTicket] = useState(false)
-
+  const user = useSelector(state => state.session.user)
   const events = useSelector(state => Object.values(state.eventsReducer))
   // console.log(events)
   const thisEvent = events?.find((event) => event.id === +eventId)
@@ -40,35 +40,48 @@ const EventDetails = () => {
         <div className="event_detail_img_container">
           <img className="event_detail_img" src={thisEvent?.pic_url} />
         </div>
+        <div>
+          <div className="event_detail">
+            <h1>{thisEvent?.name}</h1>
+          </div>
+          <div className="event_detail">
+            <p>{thisEvent?.description}</p>
+          </div>
+          <div className="event_detail">
+            <p>{thisEvent?.time}</p>
+          </div>
+          <div className="event_detail">
+            <p>{thisEvent?.price}</p>
+          </div>
+          <div className="event_detail">
+            <p>{thisEvent?.location}</p>
+          </div>
+          <div className="edit_button_div">
 
-        <div className="event_detail">
-          <h1>{thisEvent?.name}</h1>
-          <p>{thisEvent?.description}</p>
-          <p>{thisEvent?.time}</p>
-          <p>{thisEvent?.price}</p>
-          <p>{thisEvent?.location}</p>
+          </div>
+          <div className="ticket_register_div">
+            {showEditEvent && (
+              <Modal className='edit_modal' onClose={() => setShowEditEvent(false)}>
+                <EditEventForm openModal={openModal} />
+              </Modal>
+            )}
+            {user?.id === thisEvent?.user_id ?
+              <button
+                onClick={() => setShowEditEvent(true)}
+                className='edit_button'
+              >
+                Edit Event
+              </button>
+              : null
+            }
+            {showTicket && (
+              <Modal onClose={() => setShowTicket(false)}>
+                <RegisterTicketForm openTicketModal={openTicketModal} />
+              </Modal>
+            )}
+            <button className="ticket_register_button" onClick={() => setShowTicket(true)}>Register</button>
+          </div>
         </div>
-      </div>
-      <div className="edit_button_div">
-        {showEditEvent && (
-          <Modal className='edit_modal' onClose={() => setShowEditEvent(false)}>
-            <EditEventForm openModal={openModal} />
-          </Modal>
-        )}
-        <button
-          onClick={() => setShowEditEvent(true)}
-          className='edit_button'
-        >
-          Edit Event
-        </button>
-      </div>
-      <div>
-        {showTicket && (
-          <Modal onClose={() => setShowTicket(false)}>
-            <RegisterTicketForm openTicketModal={openTicketModal} />
-          </Modal>
-        )}
-        <button onClick={() => setShowTicket(true)}>Register</button>
       </div>
     </div>
   )

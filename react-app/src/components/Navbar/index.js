@@ -49,7 +49,7 @@ const NavBar = () => {
               <NavLink to={`/tickets/${user.id}`}>
 
                 {/* Try to implement a dropdown for the profile logo */}
-                <img className="profile_img" src="https://i.imgur.com/72dKGdN.png" />
+                <img className="profile_img" src="https://i.imgur.com/c1Abe1E.png" />
               </NavLink>
 
               <LogoutButton />

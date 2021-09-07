@@ -5,11 +5,12 @@ import { createTicket } from "../../store/ticket";
 import { useParams } from "react-router";
 
 import "./RegisterTicket.css"
-const RegisterTicketForm = () => {
+const RegisterTicketForm = ({ openTicketModal }) => {
   const user = useSelector((state) => state.session.user)
 
   const [num_ticket, setNumTickets] = useState("")
   const [user_id, setUserId] = useState(user.id)
+  const [errors, setErrors] = useState([]);
   const { eventId } = useParams()
 
   const event_id = eventId
@@ -23,8 +24,10 @@ const RegisterTicketForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(user_id)
-    // console.log(eventId)
+
+    if (num_ticket.length === 0) {
+      setErrors(["Please input the number of tickets to purchase"])
+    }
 
     const payload = {
       user_id,
@@ -32,19 +35,27 @@ const RegisterTicketForm = () => {
       num_ticket
     }
 
-    await dispatch(createTicket(payload))
+    const createdTick = await dispatch(createTicket(payload))
 
-    history.push(`/tickets/${user_id}`)
+    if (createdTick) {
+      history.push(`/tickets/${user_id}`)
+    }
   }
 
   const cancel = () => {
-    history.push("/")
+    openTicketModal()
+    history.push(`/events/${eventId}`)
   }
 
   return (
-    <div>
-      <h2>Event Registration</h2>
+    <div className="ticket_registration_div">
+      <h2 className="ticket_h2">Event Registration</h2>
       <form onSubmit={handleSubmit}>
+        <div>
+          {errors.map((error, ind) => (
+            <div key={ind}>{error}</div>
+          ))}
+        </div>
         <div className="ticket_h3">
           <h3 >How many tickets would you like to purchase?</h3>
         </div>
@@ -52,10 +63,10 @@ const RegisterTicketForm = () => {
           <input type="text" className="input" placeholder="# of Tickets" onChange={(e) => setNumTickets(e.target.value)} value={num_ticket}></input>
         </div>
         <div className="ticket_form_buttons">
-          <button type="submit">
+          <button className="submit_event_button" type="submit">
             Submit
           </button>
-          <button onClick={cancel}>Cancel</button>
+          <button className="cancel_event_button" onClick={cancel}>Cancel</button>
         </div>
 
 
