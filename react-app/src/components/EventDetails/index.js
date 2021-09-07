@@ -7,6 +7,8 @@ import { Modal } from "../../context/Modal";
 import EditEventForm from "../EditFormModal";
 import RegisterTicketForm from "../RegisterTicket";
 
+import './EventDetails.css'
+
 const EventDetails = () => {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -33,15 +35,19 @@ const EventDetails = () => {
 
 
   return (
-    <div>
-      <div>
-        <h1>{thisEvent?.name}</h1>
-        <p>{thisEvent?.description}</p>
-        <p>{thisEvent?.time}</p>
-        <p>{thisEvent?.price}</p>
-        <p>{thisEvent?.location}</p>
-        <p>{thisEvent?.pic_url}</p>
-        {/* <img src={thisEvent?.pic_url} /> */}
+    <div className="event_detail_entire">
+      <div className="event_detail_container">
+        <div className="event_detail_img_container">
+          <img className="event_detail_img" src={thisEvent?.pic_url} />
+        </div>
+
+        <div className="event_detail">
+          <h1>{thisEvent?.name}</h1>
+          <p>{thisEvent?.description}</p>
+          <p>{thisEvent?.time}</p>
+          <p>{thisEvent?.price}</p>
+          <p>{thisEvent?.location}</p>
+        </div>
       </div>
       <div className="edit_button_div">
         {showEditEvent && (

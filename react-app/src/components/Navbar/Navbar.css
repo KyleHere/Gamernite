@@ -32,6 +32,22 @@
   justify-content: space-evenly;
 }
 
+.upload_button{
+  padding: 10px;
+  background-color:white;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  min-width: 50px;
+  text-align: center;
+  /* margin-right: 15px; */
+}
+
+.upload_button:hover{
+  background-color: lightgray;
+}
 
 .profile_img{
   /* padding-top: ; */
@@ -39,4 +55,44 @@
   border:1px white solid;
   border-radius: 20px;
   /* padding-right: 10px; */
+}
+
+.login_navbar{
+  padding: 10px;
+  background-color:wheat;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+  margin-right: 15px;
+
+}
+
+.signup_navbar{
+
+  margin-left: 15px;
+  padding: 10px;
+  background-color:powderblue;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+
+}
+
+
+.signed_out{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  /* text-decoration: none; */
+}
+
+.signed_out :focus, :hover, :visited, :link, :active {
+  text-decoration: none;
 }

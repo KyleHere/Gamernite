@@ -1,0 +1,31 @@
+.event_detail_entire{
+
+}
+
+.event_detail_container{
+  margin-top: 90px;
+  margin-left: 50px;
+  width: 1200px;
+  background-color: green;
+  display:flex;
+}
+
+.event_detail_img_container{
+  width:700px;
+  max-width: 700px;
+  max-height: 436px;
+}
+
+.event_detail_img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.event_detail{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  align-items: flex-start;
+  width:500px
+}
