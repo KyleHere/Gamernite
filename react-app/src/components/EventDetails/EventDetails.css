@@ -1,5 +1,6 @@
 .event_detail_entire{
-
+display: flex;
+justify-content: center;
 }
 
 .event_detail_container{

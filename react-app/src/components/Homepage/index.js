@@ -43,6 +43,9 @@ const Homepage = () => {
             </div>
           </Link>))}
       </div>
+      <div className="spacing">
+
+      </div>
     </div >
   )
 }
