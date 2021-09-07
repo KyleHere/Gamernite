@@ -1,13 +1,60 @@
 .ticket_h3{
-padding-left: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.ticket_h2{
+  display: flex;
+  justify-content: center;
 }
 
 .ticket_input {
-  padding-left: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .ticket_form_buttons{
   display: flex;
-  justify-content: flex-start;
-  padding-left: 30px;
+  justify-content: center;
+  /* margin-left: 80px; */
+}
+
+.submit_event_button{
+  /* margin-left: 500px; */
+  /* padding: 10px; */
+  background-color:#C6ECAE;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+  /* margin-right: 15px; */
+}
+
+.submit_event_button:hover{
+  background-color: #A2E07B;
+  cursor: pointer;
+}
+
+.cancel_event_button{
+  margin-left: 10px;
+  /* padding: 10px; */
+  background-color:#FE675D;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 80px;
+  text-align: center;
+  /* margin-right: 15px; */
+}
+
+.cancel_event_button:hover{
+  background-color: #FE1C0B;
+  cursor: pointer;
+}
+
+.ticket_registration_div{
+  margin-top: 125px;
 }

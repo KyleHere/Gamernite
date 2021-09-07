@@ -48,8 +48,8 @@ const RegisterTicketForm = ({ openTicketModal }) => {
   }
 
   return (
-    <div>
-      <h2>Event Registration</h2>
+    <div className="ticket_registration_div">
+      <h2 className="ticket_h2">Event Registration</h2>
       <form onSubmit={handleSubmit}>
         <div>
           {errors.map((error, ind) => (
@@ -63,10 +63,10 @@ const RegisterTicketForm = ({ openTicketModal }) => {
           <input type="text" className="input" placeholder="# of Tickets" onChange={(e) => setNumTickets(e.target.value)} value={num_ticket}></input>
         </div>
         <div className="ticket_form_buttons">
-          <button type="submit">
+          <button className="submit_event_button" type="submit">
             Submit
           </button>
-          <button onClick={cancel}>Cancel</button>
+          <button className="cancel_event_button" onClick={cancel}>Cancel</button>
         </div>
 
 
