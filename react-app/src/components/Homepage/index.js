@@ -21,6 +21,9 @@ const Homepage = () => {
       <div className="welcome_banner">
         <img className="welcome_banner_img" src="https://i.imgur.com/vsR4tV2.jpg" />
       </div>
+      <div className="welcome_message">
+        <h2>Begin a Journey Here</h2>
+      </div>
       <div className="event_container">
         {events?.map(event =>
         (

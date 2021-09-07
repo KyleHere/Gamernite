@@ -15,7 +15,7 @@ const EventDetails = () => {
   const { eventId } = useParams();
   const [showEditEvent, setShowEditEvent] = useState(false)
   const [showTicket, setShowTicket] = useState(false)
-
+  const user = useSelector(state => state.session.user)
   const events = useSelector(state => Object.values(state.eventsReducer))
   // console.log(events)
   const thisEvent = events?.find((event) => event.id === +eventId)
@@ -55,12 +55,15 @@ const EventDetails = () => {
             <EditEventForm openModal={openModal} />
           </Modal>
         )}
-        <button
-          onClick={() => setShowEditEvent(true)}
-          className='edit_button'
-        >
-          Edit Event
-        </button>
+        {user?.id === thisEvent?.user_id ?
+          <button
+            onClick={() => setShowEditEvent(true)}
+            className='edit_button'
+          >
+            Edit Event
+          </button>
+          : null
+        }
       </div>
       <div>
         {showTicket && (

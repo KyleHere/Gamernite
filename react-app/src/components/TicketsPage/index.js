@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { Link, NavLink } from "react-router-dom"
-import { useParams, useHistory } from "react-router"
+import { useParams, useHistory, Redirect } from "react-router"
 import { allTickets, deleteOneTicket } from "../../store/ticket"
 
 import './TicketsPage.css'
@@ -17,6 +17,12 @@ const TicketsPage = () => {
 
   const filtered = tickets.filter((ticket) => ticket.user_id === user.id)
   // console.log(filtered)
+
+  if (user.id !== +userId) {
+    alert("Unauthorized [Incorrect User]");
+    history.push('/')
+    // window.location.reload();
+  }
 
   useEffect(() => {
     dispatch(allTickets(userId))

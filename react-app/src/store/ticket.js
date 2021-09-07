@@ -19,7 +19,7 @@ const deleteTicket = (id) => ({
 
 export const allTickets = (id) => async dispatch => {
   const res = await fetch(`/api/tickets/${id}`)
-  console.log('RES========================================', res)
+
   if (res.ok) {
     const tickets = await res.json();
     dispatch(getTickets(tickets))

@@ -44,9 +44,9 @@ const NewEventForm = () => {
     else if (location.length === 0) {
       setErrors(["Please input the location of your event"])
     }
-    else if (location.length < 10) {
-      setErrors(["Length of location must be at least 10 characters"])
-    }
+    // else if (location.length < 10) {
+    //   setErrors(["Length of location must be at least 10 characters"])
+    // }
     else if (pic_url.length === 0) {
       setErrors(["Please input a picture url"])
     }
@@ -60,9 +60,9 @@ const NewEventForm = () => {
       pic_url
     }
 
-    const newEvent = await dispatch(createNewEvent(payload)) //needs an id to update
+    const created = await dispatch(createNewEvent(payload))
 
-    if (newEvent) {
+    if (errors.length === 0 || created) {
       history.push("/")
     }
   }
