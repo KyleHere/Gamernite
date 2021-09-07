@@ -64,35 +64,37 @@ function EditEventForm({ openModal }) {
   }
 
   return (
-    <div>
+    <div className="edit_form_container">
       <form onSubmit={handleSubmit}>
         <h3>Edit your Event</h3>
-        <button onClick={handleDelete}>Delete Event</button>
-        <div >
+        <button className="delete_form_button" onClick={handleDelete}>Delete Event</button>
+        <div className="form_input_div">
           <label>Name</label>
           <input type="text" className="form_inputs" value={name} placeholder='Name' onChange={(e) => setName(e.target.value)} />
         </div>
-        <div >
+        <div className="form_input_div">
           <label>Time</label>
           <input type="text" className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
         </div>
-        <div >
+        <div className="form_input_div">
           <label>Price</label>
           <input type="text" className="form_inputs" value={price} placeholder='Price' onChange={(e) => setPrice(e.target.value)} />
         </div>
-        <div >
+        <div className="form_input_div">
           <label>Location</label>
           <input type="text" className="form_inputs" value={location} placeholder='Location' onChange={(e) => setLocation(e.target.value)} />
         </div>
-        <div >
+        <div className="form_input_div">
           <label>Picture URL</label>
           <input type="text" className="form_inputs" value={pic_url} placeholder='Picture URL' onChange={(e) => setPic_Url(e.target.value)} />
         </div>
-        <div >
+        <div className="form_input_div">
           <label>Description</label>
           <input type="text" className="form_inputs" value={description} placeholder='Description' onChange={(e) => setDescription(e.target.value)} />
         </div>
-        <button type="submit">Save</button>
+        <div className="form_input_div">
+          <button className="edit_form_button" type="submit">Save</button>
+        </div>
       </form>
     </div>
   )
