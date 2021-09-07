@@ -10,6 +10,7 @@ const RegisterTicketForm = () => {
 
   const [num_ticket, setNumTickets] = useState("")
   const [user_id, setUserId] = useState(user.id)
+  const [errors, setErrors] = useState([]);
   const { eventId } = useParams()
 
   const event_id = eventId
@@ -23,8 +24,10 @@ const RegisterTicketForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(user_id)
-    // console.log(eventId)
+
+    if (num_ticket.length === 0) {
+      setErrors(["Please input the number of tickets to purchase"])
+    }
 
     const payload = {
       user_id,
@@ -32,9 +35,11 @@ const RegisterTicketForm = () => {
       num_ticket
     }
 
-    await dispatch(createTicket(payload))
+    const createdTick = await dispatch(createTicket(payload))
 
-    history.push(`/tickets/${user_id}`)
+    if (createdTick) {
+      history.push(`/tickets/${user_id}`)
+    }
   }
 
   const cancel = () => {
@@ -45,6 +50,11 @@ const RegisterTicketForm = () => {
     <div>
       <h2>Event Registration</h2>
       <form onSubmit={handleSubmit}>
+        <div>
+          {errors.map((error, ind) => (
+            <div key={ind}>{error}</div>
+          ))}
+        </div>
         <div className="ticket_h3">
           <h3 >How many tickets would you like to purchase?</h3>
         </div>
