@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: white;
   width: 400px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
@@ -37,6 +37,12 @@
   transition-timing-function: ease-in-out; */
 }
 
+.login_button:hover{
+  background-color: #BEB2C8;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
 .signup_button_div{
   display: flex;
   justify-content: center;
@@ -45,8 +51,24 @@
 }
 
 .signup_button{
-  display: flex;
-  justify-content: center;
+  margin-top: 20px;
+  background-color: #D7CFDD;
+
+  border: 0px;
+  height: 33.33px;
+  cursor: pointer;
+  color: #5A5B5E;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 100%;
+  text-decoration: none;
+}
+
+.signup_button:hover{
+  background-color: #BEB2C8;
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .logout_button{
@@ -66,4 +88,96 @@
 .logout_button:hover{
   background-color: #FF6978;
   cursor: pointer;
+}
+
+.login_button {
+  margin-top: 20px;
+  background-color:#F4E9CD;
+
+  border: 0px;
+  height: 33.33px;
+
+  color: #464749;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 100%;
+  text-decoration: none;
+}
+
+.login_button:hover {
+  background-color: #E0BD67;
+  cursor: pointer;
+}
+
+.divider__container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding:20px 10px;
+  height: 80px;
+  width: 400px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  border-top: 1px solid #9ea5ad;
+  display: block;
+  line-height: 1px;
+
+  margin: 15px 20px;
+}
+
+.divider-title {
+  background-color: #fff;
+  font-size: 14px;
+  color: #5D5E60;
+  text-transform: uppercase;
+}
+
+.demo-login__container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.demo-button {
+  margin-top: 20px;
+  background-color: #98C3EB;
+
+  border: 0px;
+  height: 33.33px;
+
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  width: 100%;
+  text-decoration: none;
+}
+.demo-button:hover {
+  background-color: #559BDD;
+
+  cursor: pointer;
+}
+
+.signup_stuff {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.signup_stuff > a{
+  padding-top: 5px;
+  color: #65A5E2;
 }

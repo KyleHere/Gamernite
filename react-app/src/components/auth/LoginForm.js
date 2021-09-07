@@ -66,9 +66,9 @@ const LoginForm = () => {
             />
             <button className="login_button" type='submit'>Login</button>
           </div>
-          <div>
-            <span>Don't have an account?</span>
-            <NavLink className="signup_button" to="/sign-up">
+          <div className="signup_stuff">
+            <span>Don't have an account?      </span>
+            <NavLink className="signup__button" to="/sign-up">
               Sign up
             </NavLink>
           </div>
@@ -78,9 +78,9 @@ const LoginForm = () => {
         <div className="divider">
           <strong className="divider-title">OR</strong>
         </div>
-      </div>
-      <div className="demo-login__container">
-        <DemoLogin />
+        <div className="demo-login__container">
+          <DemoLogin />
+        </div>
       </div>
     </>
   );
