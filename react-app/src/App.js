@@ -13,7 +13,7 @@ import NewEventForm from './components/NewEventForm';
 import Homepage from './components/Homepage'
 import EventDetails from './components/EventDetails';
 import TicketsPage from './components/TicketsPage';
-
+import Footer from './components/Footer';
 function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
@@ -30,6 +30,8 @@ function App() {
   }
 
   return (
+
+
     <BrowserRouter>
       <NavBar />
       <Switch>
@@ -58,6 +60,9 @@ function App() {
           <TicketsPage />
         </Route>
       </Switch>
+      <div>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
