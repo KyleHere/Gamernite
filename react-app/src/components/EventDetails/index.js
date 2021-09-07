@@ -44,17 +44,18 @@ const EventDetails = () => {
           <div className="event_detail">
             <h1>{thisEvent?.name}</h1>
           </div>
-          <div className="event_detail">
-            <p>{thisEvent?.description}</p>
-          </div>
+
           <div className="event_detail">
             <p>{thisEvent?.time}</p>
           </div>
           <div className="event_detail">
-            <p>{thisEvent?.price}</p>
+            <p>$ {thisEvent?.price}</p>
           </div>
           <div className="event_detail">
             <p>{thisEvent?.location}</p>
+          </div>
+          <div className="event_detail">
+            <p>{thisEvent?.description}</p>
           </div>
           <div className="edit_button_div">
 
