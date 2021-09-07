@@ -47,3 +47,9 @@
   background-color: #AD2E24;
   cursor: pointer;
 }
+
+.input_containers{
+  display:flex;
+  justify-content: center;
+  width:100%;
+}
