@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { createNewEvent } from "../../store/event";
 
+import './NewEventForm.css'
+
 const NewEventForm = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -42,9 +44,9 @@ const NewEventForm = () => {
   }
 
   return (
-    <div>
+    <div className="new_event_form_container">
       <h2>Upload a New Event</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="new_event_form" onSubmit={handleSubmit}>
         <div className="input_containers">
           <input
             type="text"
@@ -93,7 +95,7 @@ const NewEventForm = () => {
           <input
             type="text"
             className="input"
-            placeholder="Picture"
+            placeholder="Picture URL"
             onChange={(e) => setPicUrl(e.target.value)}
             value={pic_url}
             required>
@@ -111,13 +113,13 @@ const NewEventForm = () => {
           </textarea>
         </div>
 
-        <button className="create-button" type="submit">
+        <button className="create_button" type="submit">
           Create
         </button>
       </form>
 
       <div>
-        <button className="cancel-button" onClick={cancel}>
+        <button className="cancel_button" onClick={cancel}>
           Cancel
         </button>
       </div>
