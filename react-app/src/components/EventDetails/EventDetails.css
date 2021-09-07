@@ -6,7 +6,7 @@
   margin-top: 90px;
   margin-left: 50px;
   width: 1200px;
-  background-color: green;
+  background-color: white;
   display:flex;
 }
 
@@ -27,5 +27,49 @@
   /* justify-content: center; */
   flex-direction: row;
   align-items: flex-start;
-  width:500px
+  width:450px;
+  margin-left: 20px;
+}
+
+.ticket_register_button{
+  padding: 10px;
+  background-color: #89FBA2;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+
+  min-width: 50px;
+  text-align: center;
+  /* margin-right: 15px; */
+}
+
+.ticket_register_button:hover{
+  background-color: #84AE87;
+  cursor: pointer;
+}
+
+
+.ticket_register_div{
+  display:flex;
+  justify-content: center;
+}
+
+.edit_button{
+  padding: 10px;
+  background-color:#D8B4A0;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+
+  min-width: 50px;
+  text-align: center;
+
+  margin-right: 15px;
+}
+
+.edit_button:hover{
+  background-color:#C48C6E;
+  cursor: pointer;
 }

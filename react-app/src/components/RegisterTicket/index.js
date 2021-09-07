@@ -5,7 +5,7 @@ import { createTicket } from "../../store/ticket";
 import { useParams } from "react-router";
 
 import "./RegisterTicket.css"
-const RegisterTicketForm = () => {
+const RegisterTicketForm = ({ openTicketModal }) => {
   const user = useSelector((state) => state.session.user)
 
   const [num_ticket, setNumTickets] = useState("")
@@ -43,7 +43,8 @@ const RegisterTicketForm = () => {
   }
 
   const cancel = () => {
-    history.push("/")
+    openTicketModal()
+    history.push(`/events/${eventId}`)
   }
 
   return (
