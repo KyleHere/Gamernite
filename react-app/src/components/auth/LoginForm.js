@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
 import { login } from '../../store/session';
+
+import DemoLogin from './DemoLogin';
 import './Login-Signup.css'
 
 const LoginForm = () => {
@@ -32,46 +34,55 @@ const LoginForm = () => {
   }
 
   return (
-    <div className="login_container">
-      <h2 className="form_title">Login</h2>
-      <form className="login_form" onSubmit={onLogin}>
-        <div>
+    <>
+      <div className="login_container">
+        <h2 className="form_title">Login</h2>
+        <form className="login_form" onSubmit={onLogin}>
           <div>
-            {errors.map((error, ind) => (
-              <div key={ind}>{error}</div>
-            ))}
+            <div>
+              {errors.map((error, ind) => (
+                <div key={ind}>{error}</div>
+              ))}
+            </div>
           </div>
-        </div>
 
 
-        <div className="input">
-          <input
-            name='email'
-            type='text'
-            placeholder='Email'
-            value={email}
-            onChange={updateEmail}
-          />
+          <div className="input">
+            <input
+              name='email'
+              type='text'
+              placeholder='Email'
+              value={email}
+              onChange={updateEmail}
+            />
+          </div>
+          <div className='input'>
+            <input
+              name='password'
+              type='password'
+              placeholder='Password'
+              value={password}
+              onChange={updatePassword}
+            />
+            <button className="login_button" type='submit'>Login</button>
+          </div>
+          <div>
+            <span>Don't have an account?</span>
+            <NavLink className="signup_button" to="/sign-up">
+              Sign up
+            </NavLink>
+          </div>
+        </form>
+      </div>
+      <div className="divider__container">
+        <div className="divider">
+          <strong className="divider-title">OR</strong>
         </div>
-        <div className='input'>
-          <input
-            name='password'
-            type='password'
-            placeholder='Password'
-            value={password}
-            onChange={updatePassword}
-          />
-          <button className="login_button" type='submit'>Login</button>
-        </div>
-
-        <div>
-          <p>Don't have an account?   </p>
-          <NavLink className="signup_button" to="/sign-up">
-            Sign up
-          </NavLink>
-        </div>
-      </form>
-    </div>
+      </div>
+      <div className="demo-login__container">
+        <DemoLogin />
+      </div>
+    </>
   );
 };
 
