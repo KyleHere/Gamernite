@@ -26,11 +26,33 @@ function EditEventForm({ openModal }) {
   const [price, setPrice] = useState(event?.price)
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
-
+  const [errors, setErrors] = useState([]);
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (name.length === 0) {
+      setErrors(["Please enter the name of the event"])
+    }
+    else if (name.length > 50) {
+      setErrors(["Name of event must be less than 50 characters"])
+    }
+    else if (description.length === 0) {
+      setErrors(["Please describe your event"])
+    }
+    else if (time.length === 0) {
+      setErrors(["Please provide time of event [xx:xx am/pm] )"])
+    }
+    else if (price.length === 0) {
+      setErrors(["Please enter a ticket price"])
+    }
+    else if (location.length === 0) {
+      setErrors(["Please input the location of your event"])
+    }
+    else if (pic_url.length === 0) {
+      setErrors(["Please input a picture url"])
+    }
 
     const payload = {
       ...event,
@@ -41,13 +63,16 @@ function EditEventForm({ openModal }) {
       location,
       pic_url
     }
-    let editedEvent = await dispatch(updateEvent(payload, eventId))
 
-    if (editedEvent) {
-      // setShowEditEvent(false)
-      openModal()
-      history.push(`/events/${eventId}`)
+    if (!errors) {
+      let editedEvent = await dispatch(updateEvent(payload, eventId))
+      if (editedEvent) {
+        // setShowEditEvent(false)
+        openModal()
+        history.push(`/events/${eventId}`)
+      }
     }
+
 
   }
 
@@ -66,6 +91,11 @@ function EditEventForm({ openModal }) {
   return (
     <div className="edit_form_container">
       <form onSubmit={handleSubmit}>
+        <div className="error_text">
+          {errors.map((error, ind) => (
+            <div key={ind}>{error}</div>
+          ))}
+        </div>
         <h3>Edit your Event</h3>
         <button className="delete_form_button" onClick={handleDelete}>Delete Event</button>
         <div className="form_input_div">

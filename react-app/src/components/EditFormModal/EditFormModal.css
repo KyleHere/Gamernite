@@ -51,3 +51,8 @@
   background-color: #FE4134;
   cursor: pointer;
 }
+
+
+.error_text{
+  color:red
+}
