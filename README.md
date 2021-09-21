@@ -1,4 +1,4 @@
-# Artygram
+# Gamernite
 
 Wiki: https://github.com/KyleHere/Gamernite
 
