@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router";
 
+import { deleteOneTicket, allTickets } from "../../store/ticket";
 import { deleteEvent, updateEvent } from "../../store/event";
 import './EditFormModal.css'
 
@@ -13,7 +14,12 @@ function EditEventForm({ openModal }) {
   const user = useSelector(state => state.session.user)
   const events = useSelector(state => Object.values(state.eventsReducer))
   const event = useSelector((state) => state?.eventsReducer[eventId])
+  const tickets = useSelector(state => Object.values(state.ticketsReducer))
 
+  // const numEventId = Number(eventId)
+  const filtered = tickets.filter((ticket) => ticket.event_id === +eventId)
+  // console.log(typeof (numEventId))
+  console.log(filtered)
   // name,
   // description,
   // time,
@@ -27,6 +33,10 @@ function EditEventForm({ openModal }) {
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
   const [errors, setErrors] = useState([]);
+
+  useEffect(() => {
+    dispatch(allTickets(user.id))
+  }, [])
 
 
   const handleSubmit = async (e) => {
@@ -78,6 +88,11 @@ function EditEventForm({ openModal }) {
 
   const handleDelete = () => {
     openModal()
+
+    for (let i = 0; i < filtered.length; i++) {
+      dispatch(deleteOneTicket(filtered[i].id))
+    }
+    
     dispatch(deleteEvent(eventId))
       .then(() => {
         return history.push('/')
