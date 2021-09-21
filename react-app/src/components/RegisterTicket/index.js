@@ -68,9 +68,12 @@ const RegisterTicketForm = ({ openTicketModal }) => {
           </button>
           <button className="cancel_event_button" onClick={cancel}>Cancel</button>
         </div>
-
-
       </form>
+      <div>
+        <span>
+        
+        </span>
+      </div>
     </div>
   )
 }
