@@ -60,10 +60,12 @@ const NewEventForm = () => {
       pic_url
     }
 
-    const created = await dispatch(createNewEvent(payload))
 
-    if (errors.length === 0 || created) {
-      history.push("/")
+    if (!errors) {
+      const created = await dispatch(createNewEvent(payload))
+      if (created) {
+        history.push("/")
+      }
     }
   }
 
@@ -75,7 +77,7 @@ const NewEventForm = () => {
     <div className="new_event_form_container">
       <h2>Upload a New Event</h2>
       <form className="new_event_form" onSubmit={handleSubmit}>
-        <div>
+        <div className="error_text">
           {errors.map((error, ind) => (
             <div key={ind}>{error}</div>
           ))}

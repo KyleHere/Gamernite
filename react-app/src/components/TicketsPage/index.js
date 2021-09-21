@@ -17,7 +17,7 @@ const TicketsPage = () => {
   const events = useSelector(state => Object.values(state.eventsReducer))
 
   const filtered = tickets.filter((ticket) => ticket.user_id === user.id)
-  // console.log(filtered)
+  console.log(filtered)
 
   if (user.id !== +userId) {
     alert("Unauthorized [Incorrect User]");
