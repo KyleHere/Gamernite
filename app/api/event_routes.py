@@ -29,6 +29,7 @@ def create_event():
             user_id=user.id,
             name=data['name'],
             description=data['description'],
+            date=data['date'],
             time=data['time'],
             price=data['price'],
             location=data['location'],
@@ -52,6 +53,7 @@ def update_event(id):
     if form.validate_on_submit():
         data = form.data
         event.name = data['name']
+        event.date = data['date']
         event.time = data['time']
         event.price = data['price']
         event.location = data['location']

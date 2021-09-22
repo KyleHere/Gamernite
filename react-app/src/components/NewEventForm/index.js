@@ -8,6 +8,7 @@ import './NewEventForm.css'
 const NewEventForm = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [price, setPrice] = useState("");
   const [location, setLocation] = useState("");
@@ -54,6 +55,7 @@ const NewEventForm = () => {
     const payload = {
       name,
       description,
+      date,
       time,
       price,
       location,
@@ -95,7 +97,18 @@ const NewEventForm = () => {
 
         <div className="input_containers">
           <input
-            type="text"
+            type="date"
+            className="input date_input"
+            placeholder="Date of Event"
+            onChange={(e) => setDate(e.target.value)}
+            value={date}
+          >
+          </input>
+        </div>
+
+        <div className="input_containers">
+          <input
+            type="time"
             className="input"
             placeholder="Time of Event"
             onChange={(e) => setTime(e.target.value)}

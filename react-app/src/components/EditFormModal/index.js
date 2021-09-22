@@ -28,6 +28,7 @@ function EditEventForm({ openModal }) {
   // pic_url
   const [name, setName] = useState(event?.name)
   const [description, setDescription] = useState(event?.description)
+  const [date, setDate] = useState(event?.date)
   const [time, setTime] = useState(event?.time)
   const [price, setPrice] = useState(event?.price)
   const [location, setLocation] = useState(event?.location)
@@ -92,7 +93,7 @@ function EditEventForm({ openModal }) {
     for (let i = 0; i < filtered.length; i++) {
       dispatch(deleteOneTicket(filtered[i].id))
     }
-    
+
     dispatch(deleteEvent(eventId))
       .then(() => {
         return history.push('/')
@@ -118,8 +119,12 @@ function EditEventForm({ openModal }) {
           <input type="text" className="form_inputs" value={name} placeholder='Name' onChange={(e) => setName(e.target.value)} />
         </div>
         <div className="form_input_div">
+          <label>Date</label>
+          <input type="date" className="form_inputs" value={date} placeholder='Date' onChange={(e) => setDate(e.target.value)} />
+        </div>
+        <div className="form_input_div">
           <label>Time</label>
-          <input type="text" className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
+          <input type="" className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
         </div>
         <div className="form_input_div">
           <label>Price</label>
