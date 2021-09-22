@@ -10,7 +10,8 @@ class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(500), nullable=False)
-    time = db.Column(db.String(10), nullable=False)
+    date = db.Column(db.DateTime, default=datetime.now, nullable=False)
+    time = db.Column(db.DateTime, default=datetime.now, nullable=False)
     price = db.Column(db.String(10), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     pic_url = db.Column(db.String(255), nullable=False)
@@ -28,6 +29,7 @@ class Event(db.Model):
             'user_id': self.user_id,
             'name': self.name,
             'description': self.description,
+            'date': self.date,
             'time': self.time,
             'price': self.price,
             'user_id': self.user_id,
