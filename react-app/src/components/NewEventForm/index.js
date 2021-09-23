@@ -3,7 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { createNewEvent } from "../../store/event";
 
+import DatePicker from "react-datepicker";
+
 import './NewEventForm.css'
+// import "~react-datepicker/dist/react-datepicker.css"
+import 'react-datepicker/dist/react-datepicker.css'
 
 const NewEventForm = () => {
   const [name, setName] = useState("");
@@ -36,10 +40,13 @@ const NewEventForm = () => {
       setErrors(["Please describe your event"])
     }
     else if (time.length === 0) {
-      setErrors(["Please provide time of event [xx:xx am/pm] )"])
+      setErrors(["Please provide time & date of event"])
     }
     else if (price.length === 0) {
       setErrors(["Please enter a ticket price"])
+    }
+    else if (typeof (price) !== 'number') {
+      setErrors(["Price must be a number"])
     }
     else if (location.length === 0) {
       setErrors(["Please input the location of your event"])
@@ -61,12 +68,13 @@ const NewEventForm = () => {
     }
 
 
-    if (!errors) {
+    if (!errors.length) {
       const created = await dispatch(createNewEvent(payload))
       if (created) {
         history.push("/")
       }
     }
+
   }
 
   const cancel = () => {
@@ -95,13 +103,26 @@ const NewEventForm = () => {
 
         <div className="input_containers">
           <input
-            type="text"
+            type="datetime-local"
             className="input"
             placeholder="Time of Event"
             onChange={(e) => setTime(e.target.value)}
             value={time}
           >
           </input>
+
+          {/* <DatePicker
+            selected={time}
+            onChange={(date) => setTime(date)}
+            timeInputLabel="Time:"
+            // dateFormat="MM/dd/yyyy h:mm aa"
+            showTimeInput
+            showTimeSelect
+            timeFormat="p"
+            timeIntervals={30}
+            dateFormat="Pp"
+          /> */}
+          <p></p>
         </div>
 
         <div className="input_containers">
