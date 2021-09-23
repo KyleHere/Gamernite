@@ -49,7 +49,8 @@ const EventDetails = () => {
             <p>{thisEvent?.time}</p>
           </div>
           <div className="event_detail">
-            <p>${thisEvent?.price.toFixed(2)}</p>
+            <p>${Number(thisEvent?.price).toFixed(2)}</p>
+            {/* <p>${typeof(thisEvent?.price.toFixed(2)}</p> */}
           </div>
           <div className="event_detail">
             <p>{thisEvent?.location}</p>
