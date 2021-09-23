@@ -19,7 +19,7 @@ function EditEventForm({ openModal }) {
   // const numEventId = Number(eventId)
   const filtered = tickets.filter((ticket) => ticket.event_id === +eventId)
   // console.log(typeof (numEventId))
-  console.log(filtered)
+  // console.log(filtered)
   // name,
   // description,
   // time,
@@ -29,7 +29,7 @@ function EditEventForm({ openModal }) {
   const [name, setName] = useState(event?.name)
   const [description, setDescription] = useState(event?.description)
 
-  const [time, setTime] = useState(event?.time)
+  const [time, setTime] = useState(event.time)
   const [price, setPrice] = useState(event?.price)
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
@@ -65,6 +65,7 @@ function EditEventForm({ openModal }) {
       setErrors(["Please input a picture url"])
     }
 
+
     const payload = {
       ...event,
       name,
@@ -74,6 +75,8 @@ function EditEventForm({ openModal }) {
       location,
       pic_url
     }
+
+    console.log(time)
 
     if (!errors) {
       let editedEvent = await dispatch(updateEvent(payload, eventId))
@@ -120,7 +123,7 @@ function EditEventForm({ openModal }) {
         </div>
         <div className="form_input_div">
           <label>Time</label>
-          <input type="" className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
+          <input type="datetime-local" className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
         </div>
         <div className="form_input_div">
           <label>Price</label>
