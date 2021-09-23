@@ -3,13 +3,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { createNewEvent } from "../../store/event";
 
+import DatePicker from "react-datepicker";
+
 import './NewEventForm.css'
+// import "~react-datepicker/dist/react-datepicker.css"
+import 'react-datepicker/dist/react-datepicker.css'
 
 const NewEventForm = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [time, setTime] = useState(new Date());
   const [price, setPrice] = useState("");
   const [location, setLocation] = useState("");
   const [pic_url, setPicUrl] = useState("");
@@ -55,7 +58,6 @@ const NewEventForm = () => {
     const payload = {
       name,
       description,
-      date,
       time,
       price,
       location,
@@ -64,10 +66,10 @@ const NewEventForm = () => {
 
 
     if (!errors) {
-      const created = await dispatch(createNewEvent(payload))
-      if (created) {
-        history.push("/")
-      }
+    }
+    const created = await dispatch(createNewEvent(payload))
+    if (created) {
+      history.push("/")
     }
   }
 
@@ -97,24 +99,26 @@ const NewEventForm = () => {
 
         <div className="input_containers">
           <input
-            type="date"
-            className="input date_input"
-            placeholder="Date of Event"
-            onChange={(e) => setDate(e.target.value)}
-            value={date}
-          >
-          </input>
-        </div>
-
-        <div className="input_containers">
-          <input
-            type="time"
+            type="datetime-local"
             className="input"
             placeholder="Time of Event"
             onChange={(e) => setTime(e.target.value)}
             value={time}
           >
           </input>
+
+          {/* <DatePicker
+            selected={time}
+            onChange={(date) => setTime(date)}
+            timeInputLabel="Time:"
+            // dateFormat="MM/dd/yyyy h:mm aa"
+            showTimeInput
+            showTimeSelect
+            timeFormat="p"
+            timeIntervals={30}
+            dateFormat="Pp"
+          /> */}
+          <p></p>
         </div>
 
         <div className="input_containers">

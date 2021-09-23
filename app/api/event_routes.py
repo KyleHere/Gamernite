@@ -7,6 +7,7 @@ from flask_login import current_user, login_required
 from datetime import datetime, time
 from .auth_routes import validation_errors_to_error_messages
 from ..forms.event_form import CreateEventForm
+import pdb
 
 event_routes = Blueprint('events', __name__)
 
@@ -25,19 +26,20 @@ def create_event():
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         data = form.data
+        print(data, "================DATA")
         new_event = Event(
             user_id=user.id,
             name=data['name'],
             description=data['description'],
-            date=data['date'],
             time=data['time'],
             price=data['price'],
             location=data['location'],
             pic_url=data['pic_url'],
         )
-
+        print(new_event, "=======================EVENT")
         db.session.add(new_event)
         db.session.commit()
+
         return new_event.to_dict()
 
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
@@ -53,7 +55,6 @@ def update_event(id):
     if form.validate_on_submit():
         data = form.data
         event.name = data['name']
-        event.date = data['date']
         event.time = data['time']
         event.price = data['price']
         event.location = data['location']
