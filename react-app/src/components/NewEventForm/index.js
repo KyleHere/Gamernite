@@ -12,7 +12,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 const NewEventForm = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [time, setTime] = useState(new Date());
+  const [time, setTime] = useState("");
   const [price, setPrice] = useState("");
   const [location, setLocation] = useState("");
   const [pic_url, setPicUrl] = useState("");
@@ -40,10 +40,13 @@ const NewEventForm = () => {
       setErrors(["Please describe your event"])
     }
     else if (time.length === 0) {
-      setErrors(["Please provide time of event [xx:xx am/pm] )"])
+      setErrors(["Please provide time & date of event"])
     }
     else if (price.length === 0) {
       setErrors(["Please enter a ticket price"])
+    }
+    else if (typeof (price) !== 'number') {
+      setErrors(["Price must be a number"])
     }
     else if (location.length === 0) {
       setErrors(["Please input the location of your event"])
@@ -65,12 +68,13 @@ const NewEventForm = () => {
     }
 
 
-    if (!errors) {
+    if (!errors.length) {
+      const created = await dispatch(createNewEvent(payload))
+      if (created) {
+        history.push("/")
+      }
     }
-    const created = await dispatch(createNewEvent(payload))
-    if (created) {
-      history.push("/")
-    }
+
   }
 
   const cancel = () => {

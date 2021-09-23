@@ -18,22 +18,7 @@ function EditEventForm({ openModal }) {
 
   // const numEventId = Number(eventId)
   const filtered = tickets.filter((ticket) => ticket.event_id === +eventId)
-  // console.log(typeof (numEventId))
-  // console.log(filtered)
-  // name,
-  // description,
-  // time,
-  // price,
-  // location,
-  // pic_url
-  const [name, setName] = useState(event?.name)
-  const [description, setDescription] = useState(event?.description)
 
-  const [time, setTime] = useState(event.time)
-  const [price, setPrice] = useState(event?.price)
-  const [location, setLocation] = useState(event?.location)
-  const [pic_url, setPic_Url] = useState(event?.pic_url)
-  const [errors, setErrors] = useState([]);
   const newTime = new Date(event.time)
 
   let newMonth;
@@ -42,7 +27,20 @@ function EditEventForm({ openModal }) {
     newMonth = `0${newTime.getMonth()}`
   }
 
-  const parsedTime = `${newTime.getFullYear()}-${newMonth}-${newTime.getDate()}T${newTime.getUTCHours()}:${newTime.getUTCMinutes()}:00`
+  let newDay;
+  let tester2 = String(newTime.getDate())
+  if (tester2.length < 2 && tester2.length > 0) {
+    newDay = `0${newTime.getDate()}`
+  }
+
+  const [name, setName] = useState(event?.name)
+  const [description, setDescription] = useState(event?.description)
+
+  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? newMonth : newTime.getMonth()}-${tester2.length < 2 ? newDay : newTime.getDate()}T${newTime.getUTCHours()}:${newTime.getUTCMinutes()}`)
+  const [price, setPrice] = useState(event?.price)
+  const [location, setLocation] = useState(event?.location)
+  const [pic_url, setPic_Url] = useState(event?.pic_url)
+  const [errors, setErrors] = useState([]);
 
   useEffect(() => {
     dispatch(allTickets(user.id))
@@ -62,10 +60,13 @@ function EditEventForm({ openModal }) {
       setErrors(["Please describe your event"])
     }
     else if (time.length === 0) {
-      setErrors(["Please provide time of event [xx:xx am/pm] )"])
+      setErrors(["Please provide time & date of event"])
     }
     else if (price.length === 0) {
       setErrors(["Please enter a ticket price"])
+    }
+    else if (typeof (price) !== 'number') {
+      setErrors(["Price must be a number"])
     }
     else if (location.length === 0) {
       setErrors(["Please input the location of your event"])
@@ -87,15 +88,13 @@ function EditEventForm({ openModal }) {
 
     // console.log(time)
 
-    if (!errors) {
+    if (!errors.length) {
       let editedEvent = await dispatch(updateEvent(payload, eventId))
       if (editedEvent) {
-        // setShowEditEvent(false)
         openModal()
         history.push(`/events/${eventId}`)
       }
     }
-
 
   }
 
@@ -132,7 +131,7 @@ function EditEventForm({ openModal }) {
         </div>
         <div className="form_input_div">
           <label>Time</label>
-          <input type="datetime-local" className="form_inputs" value={parsedTime} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
+          <input type="datetime-local" className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
         </div>
         <div className="form_input_div">
           <label>Price</label>
