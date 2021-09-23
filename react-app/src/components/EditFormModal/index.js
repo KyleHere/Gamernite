@@ -34,6 +34,15 @@ function EditEventForm({ openModal }) {
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
   const [errors, setErrors] = useState([]);
+  const newTime = new Date(event.time)
+
+  let newMonth;
+  let tester = String(newTime.getMonth()) //getMonth() returns a number usually so .length returns unexpected
+  if (tester.length < 2 && tester.length > 0) { //brute force month conversion for months before OCT
+    newMonth = `0${newTime.getMonth()}`
+  }
+
+  const parsedTime = `${newTime.getFullYear()}-${newMonth}-${newTime.getDate()}T${newTime.getUTCHours()}:${newTime.getUTCMinutes()}:00`
 
   useEffect(() => {
     dispatch(allTickets(user.id))
@@ -76,7 +85,7 @@ function EditEventForm({ openModal }) {
       pic_url
     }
 
-    console.log(time)
+    // console.log(time)
 
     if (!errors) {
       let editedEvent = await dispatch(updateEvent(payload, eventId))
@@ -123,7 +132,7 @@ function EditEventForm({ openModal }) {
         </div>
         <div className="form_input_div">
           <label>Time</label>
-          <input type="datetime-local" className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
+          <input type="datetime-local" className="form_inputs" value={parsedTime} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
         </div>
         <div className="form_input_div">
           <label>Price</label>
