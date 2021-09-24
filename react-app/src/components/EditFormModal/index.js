@@ -19,12 +19,12 @@ function EditEventForm({ openModal }) {
   // const numEventId = Number(eventId)
   const filtered = tickets.filter((ticket) => ticket.event_id === +eventId)
 
-  const newTime = new Date(event.time)
+  const newTime = new Date(event?.time)
 
   let newMonth;
-  let tester = String(newTime.getMonth()) //getMonth() returns a number usually so .length returns unexpected
+  let tester = String(newTime?.getMonth()) //getMonth() returns a number usually so .length returns unexpected
   if (tester.length < 2 && tester.length > 0) { //brute force month conversion for months before OCT
-    newMonth = `0${newTime.getMonth()}`
+    newMonth = `0${newTime?.getMonth()}`
   }
 
   let newDay;
@@ -36,7 +36,7 @@ function EditEventForm({ openModal }) {
   const [name, setName] = useState(event?.name)
   const [description, setDescription] = useState(event?.description)
 
-  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? newMonth : newTime.getMonth()}-${tester2.length < 2 ? newDay : newTime.getDate()}T${newTime.getUTCHours()}:${newTime.getUTCMinutes()}`)
+  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? Number(newMonth) + 1 : newTime?.getMonth()}-${tester2.length < 2 ? newDay : newTime?.getDate()}T${newTime?.getUTCHours()}:${newTime?.getUTCMinutes()}`)
   const [price, setPrice] = useState(event?.price)
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
@@ -49,6 +49,9 @@ function EditEventForm({ openModal }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    console.log(time)
+
 
     if (name.length === 0) {
       setErrors(["Please enter the name of the event"])
