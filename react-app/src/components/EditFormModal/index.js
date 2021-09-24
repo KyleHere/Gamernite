@@ -22,10 +22,13 @@ function EditEventForm({ openModal }) {
   const newTime = new Date(event?.time)
 
   let newMonth;
-  let tester = String(newTime?.getMonth()) //getMonth() returns a number usually so .length returns unexpected
-  if (tester.length < 2 && tester.length > 0) { //brute force month conversion for months before OCT
-    newMonth = `0${newTime?.getMonth()}`
+  let tester = String(newTime?.getMonth() + 1) //getMonth() returns a number usually so .length returns unexpected
+  // console.log(tester, "=============== BEFORE TEST");
+  if (tester.length < 2 && tester.length > 0) {
+    console.log('inside') //brute force month conversion for months before OCT
+    newMonth = `0${tester}`
   }
+  // console.log(newMonth, "=============== AFTER TEST");
 
   let newDay;
   let tester2 = String(newTime.getDate())
@@ -33,10 +36,20 @@ function EditEventForm({ openModal }) {
     newDay = `0${newTime.getDate()}`
   }
 
+  let newMinute;
+  console.log(newTime.getMinutes())
+  let tester3 = String(newTime.getMinutes())
+  console.log(tester3, "================ BEFORE TEST")
+  if (tester3.length < 2 && tester3.length > 0) {
+    newMinute = `0${newTime.getMinutes()}`
+  }
+  console.log(newMinute, "================ AFTER TEST")
+
+
   const [name, setName] = useState(event?.name)
   const [description, setDescription] = useState(event?.description)
 
-  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? Number(newMonth) + 1 : newTime?.getMonth()}-${tester2.length < 2 ? newDay : newTime?.getDate()}T${newTime?.getUTCHours()}:${newTime?.getUTCMinutes()}`)
+  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? newMonth : newTime?.getMonth()}-${tester2.length < 2 ? newDay : newTime?.getDate()}T${newTime?.getUTCHours()}:${tester3.length < 2 ? newMinute : newTime.getMinutes()}`)
   const [price, setPrice] = useState(event?.price)
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
@@ -47,10 +60,11 @@ function EditEventForm({ openModal }) {
   }, [])
 
 
+  console.log(time, "======================== TIME BEFORE")
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(time)
+    console.log(time, "==========================TIME AFTER")
 
 
     if (name.length === 0) {
