@@ -21,6 +21,11 @@ const NewEventForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  const regex = new RegExp(/^\d+(?:\.\d{0,2})$/)
+
+  const today = new Date()
+  const todayString = `${today.toISOString().split('T')[0]}T00:00`
+
   if (!user) {
     return <Redirect to="/login" />
   }
@@ -28,33 +33,34 @@ const NewEventForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    let error = []
+
     if (name.length === 0) {
-      setErrors(["Please enter the name of the event"])
+      error.push("Please enter the name of the event")
     }
-    else if (name.length > 50) {
-      setErrors(["Name of event must be less than 50 characters"])
+    if (name.length > 50) {
+      error.push("Name of event must be less than 50 characters")
     }
-    else if (description.length === 0) {
-      setErrors(["Please describe your event"])
+    if (description.length === 0) {
+      error.push("Please describe your event")
     }
-    else if (time.length === 0) {
-      setErrors(["Please provide time & date of event"])
+    if (time.length === 0) {
+      error.push("Please provide time & date of event")
     }
-    else if (price.length === 0) {
-      setErrors(["Please enter a ticket price"])
+    if (isNaN(price)) {
+      error.push("Price must be a number")
     }
-    else if (typeof (price) !== 'number') {
-      setErrors(["Price must be a number"])
+    if (!regex.test(price)) {
+      error.push("Price must be at max 2 decimals: xx.xx")
     }
-    else if (location.length === 0) {
-      setErrors(["Please input the location of your event"])
+    if (location.length === 0) {
+      error.push("Please input the location of your event")
     }
-    // else if (location.length < 10) {
-    //   setErrors(["Length of location must be at least 10 characters"])
-    // }
-    else if (pic_url.length === 0) {
-      setErrors(["Please input a picture url"])
+    if (pic_url.length === 0) {
+      error.push("Please input a picture url")
     }
+    setErrors(error)
+
 
     const payload = {
       name,
@@ -66,7 +72,7 @@ const NewEventForm = () => {
     }
 
 
-    if (!errors.length) {
+    if (!error.length) {
       const created = await dispatch(createNewEvent(payload))
       if (created) {
         history.push("/")
@@ -102,6 +108,7 @@ const NewEventForm = () => {
         <div className="input_containers">
           <input
             type="datetime-local"
+            min={todayString}
             className="input"
             placeholder="Time of Event"
             onChange={(e) => setTime(e.target.value)}
@@ -147,7 +154,7 @@ const NewEventForm = () => {
 
         <div className="input_containers">
           <input
-            type="text"
+            type="url" pattern="https?://.+"
             className="input"
             placeholder="Picture URL"
             onChange={(e) => setPicUrl(e.target.value)}

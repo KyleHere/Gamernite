@@ -63,8 +63,6 @@ function EditEventForm({ openModal }) {
   const [pic_url, setPic_Url] = useState(event?.pic_url)
   const [errors, setErrors] = useState([]);
 
-  console.log(typeof (price))
-
   useEffect(() => {
     dispatch(allTickets(user.id))
   }, [])
@@ -90,7 +88,7 @@ function EditEventForm({ openModal }) {
     if (price.length === 0) {
       error.push("Please enter a ticket price")
     }
-    if (typeof (Number(price) !== 'number')) {
+    if (isNaN(price)) {
       error.push("Price must be a number")
     }
     if (!regex.test(price)) {
@@ -102,10 +100,8 @@ function EditEventForm({ openModal }) {
     if (pic_url.length === 0) {
       error.push("Please input a picture url")
     }
-    // console.log(error)
     setErrors(error)
-    // console.log(errors.length, "============== # of Errors")
-    // console.log(errors, "============== List of Errors")
+
 
     const payload = {
       ...event,
@@ -139,10 +135,7 @@ function EditEventForm({ openModal }) {
       .then(() => {
         return history.push('/')
       })
-    // console.log('DELETED------', deleted)
-    // if (deleted) {
-    //   history.push('/')
-    // }
+
   }
 
   return (
@@ -173,7 +166,7 @@ function EditEventForm({ openModal }) {
         </div>
         <div className="form_input_div">
           <label>Picture URL</label>
-          <input type="text" className="form_inputs" value={pic_url} placeholder='Picture URL' onChange={(e) => setPic_Url(e.target.value)} />
+          <input type="url" pattern="https?://.+" className="form_inputs" value={pic_url} placeholder='Picture URL' onChange={(e) => setPic_Url(e.target.value)} />
         </div>
         <div className="form_input_div">
           <label>Description</label>
