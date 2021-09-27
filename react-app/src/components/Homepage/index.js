@@ -37,7 +37,7 @@ const Homepage = () => {
                 <p className="event_p"> {event?.name} </p>
                 <p className="event_p"> {event?.time} </p>
                 <p className="event_p"> {event?.location} </p>
-                <p className="event_p"> Starts at ${Number(event?.price).toFixed(2)} </p>
+                <p className="event_p"> Starts at ${(event?.price).toFixed(2)} </p>
                 {/* </Link> */}
               </div>
             </div>

@@ -21,11 +21,12 @@ function EditEventForm({ openModal }) {
 
   const newTime = new Date(event?.time)
 
+
   let newMonth;
   let tester = String(newTime?.getMonth() + 1) //getMonth() returns a number usually so .length returns unexpected
   // console.log(tester, "=============== BEFORE TEST");
   if (tester.length < 2 && tester.length > 0) {
-    console.log('inside') //brute force month conversion for months before OCT
+    // console.log('inside') //brute force month conversion for months before OCT
     newMonth = `0${tester}`
   }
   // console.log(newMonth, "=============== AFTER TEST");
@@ -37,19 +38,27 @@ function EditEventForm({ openModal }) {
   }
 
   let newMinute;
-  console.log(newTime.getMinutes())
   let tester3 = String(newTime.getMinutes())
-  console.log(tester3, "================ BEFORE TEST")
   if (tester3.length < 2 && tester3.length > 0) {
     newMinute = `0${newTime.getMinutes()}`
   }
-  console.log(newMinute, "================ AFTER TEST")
+
+
+  let newHour;
+  console.log(newTime.getUTCHours())
+  let tester4 = String(newTime.getUTCHours())
+  console.log(tester4, "================ BEFORE TEST")
+  if (tester4.length < 2 && tester4.length > 0) {
+    newHour = `0${newTime.getUTCHours()}`
+  }
+  console.log(newHour, "================ AFTER TEST")
+
 
 
   const [name, setName] = useState(event?.name)
   const [description, setDescription] = useState(event?.description)
 
-  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? newMonth : newTime?.getMonth()}-${tester2.length < 2 ? newDay : newTime?.getDate()}T${newTime?.getUTCHours()}:${tester3.length < 2 ? newMinute : newTime.getMinutes()}`)
+  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? newMonth : newTime?.getMonth()}-${tester2.length < 2 ? newDay : newTime?.getDate()}T${tester4.length < 2 ? newHour : newTime?.getUTCHours()}:${tester3.length < 2 ? newMinute : newTime.getMinutes()}`)
   const [price, setPrice] = useState(event?.price)
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
