@@ -20,6 +20,8 @@ const EventDetails = () => {
   // console.log(events)
   const thisEvent = events?.find((event) => event.id === +eventId)
 
+
+
   const openModal = () => {
     setShowEditEvent(!showEditEvent)
   }
@@ -49,7 +51,8 @@ const EventDetails = () => {
             <p>{thisEvent?.time}</p>
           </div>
           <div className="event_detail">
-            <p>${thisEvent?.price.toFixed(2)}</p>
+            <p>${Number(thisEvent?.price).toFixed(2)}</p>
+            {/* <p>${typeof(thisEvent?.price.toFixed(2)}</p> */}
           </div>
           <div className="event_detail">
             <p>{thisEvent?.location}</p>

@@ -3,10 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { createNewEvent } from "../../store/event";
 
-import DatePicker from "react-datepicker";
-
 import './NewEventForm.css'
-// import "~react-datepicker/dist/react-datepicker.css"
+
 import 'react-datepicker/dist/react-datepicker.css'
 
 const NewEventForm = () => {

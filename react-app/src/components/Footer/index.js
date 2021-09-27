@@ -8,10 +8,10 @@ function Footer() {
         <span className='span-text'>created by @KyleHere</span>
       </div>
       <div className='footer_right'>
-        <a className="a_tag" href='https://github.com/KyleHere'>
+        <a className="a_tag" target="_blank" href='https://github.com/KyleHere'>
           Github
         </a>
-        <a className="a_tag" href='https://www.linkedin.com/in/kyle-tseng-220614204/'>
+        <a className="a_tag" target="_blank" href='https://www.linkedin.com/in/kyle-tseng-220614204/'>
           LinkedIn
         </a>
       </div>

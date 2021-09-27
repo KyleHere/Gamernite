@@ -14,7 +14,7 @@
   /* display: flex; */
 }
 
-.edit_form_button{
+.edit_form_button a{
   padding: 8px;
   background-color:#B2EF9B;
   text-decoration: none;

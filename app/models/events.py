@@ -11,7 +11,7 @@ class Event(db.Model):
     name = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(500), nullable=False)
     time = db.Column(db.DateTime, default=datetime.now, nullable=False)
-    price = db.Column(db.String(10), nullable=False)
+    price = db.Column(db.Float(decimal_return_scale=2), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     pic_url = db.Column(db.String(255), nullable=False)
     location = db.Column(db.String(255), nullable=False)
