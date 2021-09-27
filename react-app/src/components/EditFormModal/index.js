@@ -16,7 +16,8 @@ function EditEventForm({ openModal }) {
   const event = useSelector((state) => state?.eventsReducer[eventId])
   const tickets = useSelector(state => Object.values(state.ticketsReducer))
 
-  const regex = new RegExp("^\d+\.*\d{0,2}$");
+  // const regex = new RegExp("^\d+\.*\d{0,2}$");
+  const regex = new RegExp(/^\d+(?:\.\d{0,2})$/)
 
   // const numEventId = Number(eventId)
   const filtered = tickets.filter((ticket) => ticket.event_id === +eventId)
@@ -76,34 +77,35 @@ function EditEventForm({ openModal }) {
 
 
     if (name.length === 0) {
-      setErrors(["Please enter the name of the event"])
+      errors.push("Please enter the name of the event")
     }
     else if (name.length > 50) {
-      setErrors(["Name of event must be less than 50 characters"])
+      errors.push("Name of event must be less than 50 characters")
     }
     else if (description.length === 0) {
-      setErrors(["Please describe your event"])
+      errors.push("Please describe your event")
     }
     else if (time.length === 0) {
-      setErrors(["Please provide time & date of event"])
+      errors.push("Please provide time & date of event")
     }
     else if (price.length === 0) {
-      setErrors(["Please enter a ticket price"])
+      errors.push("Please enter a ticket price")
     }
     else if (typeof (price) !== 'number') {
-      setErrors(["Price must be a number"])
+      errors.push("Price must be a number")
     }
     else if (!regex.test(price)) {
-      setErrors(["Price must be at max 2 decimals: xx.xx"])
+      errors.push("Price must be at max 2 decimals: xx.xx")
     }
     else if (location.length === 0) {
-      setErrors(["Please input the location of your event"])
+      errors.push("Please input the location of your event")
     }
     else if (pic_url.length === 0) {
-      setErrors(["Please input a picture url"])
+      errors.push("Please input a picture url")
     }
 
     console.log(errors.length, "============== # of Errors")
+    console.log(errors, "============== List of Errors")
 
     const payload = {
       ...event,
