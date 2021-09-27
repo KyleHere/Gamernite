@@ -26,10 +26,11 @@
 }
 
 .right_navbar{
-  width: 300px;
+  width: 350px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-right: 20px;
 }
 
 .upload_button{
@@ -102,4 +103,14 @@
 
 .signed_out :focus, :hover, :visited, :link, :active {
   text-decoration: none;
+}
+
+.welcome-user{
+  /* padding-right: 10px; */
+  display:flex;
+  /* width: 200px; */
+}
+
+.username{
+  color:red
 }

@@ -39,6 +39,11 @@ const NavBar = () => {
 
           {user ?
             <div className="right_navbar">
+              <div className="welcome-user">
+                <pre>Welcome, </pre>
+
+                <p className="username"> {user.username}</p>
+              </div>
               <NavLink activeClassName="active" to="/new-event">
                 <div className="upload_button">
                   Upload

@@ -21,7 +21,7 @@ const NewEventForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const regex = new RegExp(/^\d+(?:\.\d{0,2})$/)
+  const regex = new RegExp(/^\d+\.*\d{0,2}$/);
 
   const today = new Date()
   const todayString = `${today.toISOString().split('T')[0]}T00:00`
