@@ -16,6 +16,8 @@ function EditEventForm({ openModal }) {
   const event = useSelector((state) => state?.eventsReducer[eventId])
   const tickets = useSelector(state => Object.values(state.ticketsReducer))
 
+  const regex = new RegExp("^\d+\.*\d{0,2}$");
+
   // const numEventId = Number(eventId)
   const filtered = tickets.filter((ticket) => ticket.event_id === +eventId)
 
@@ -29,7 +31,7 @@ function EditEventForm({ openModal }) {
     // console.log('inside') //brute force month conversion for months before OCT
     newMonth = `0${tester}`
   }
-  // console.log(newMonth, "=============== AFTER TEST");
+
 
   let newDay;
   let tester2 = String(newTime.getDate())
@@ -45,13 +47,10 @@ function EditEventForm({ openModal }) {
 
 
   let newHour;
-  console.log(newTime.getUTCHours())
   let tester4 = String(newTime.getUTCHours())
-  console.log(tester4, "================ BEFORE TEST")
   if (tester4.length < 2 && tester4.length > 0) {
     newHour = `0${newTime.getUTCHours()}`
   }
-  console.log(newHour, "================ AFTER TEST")
 
 
 
@@ -69,11 +68,11 @@ function EditEventForm({ openModal }) {
   }, [])
 
 
-  console.log(time, "======================== TIME BEFORE")
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(time, "==========================TIME AFTER")
+
 
 
     if (name.length === 0) {
@@ -94,6 +93,9 @@ function EditEventForm({ openModal }) {
     else if (typeof (price) !== 'number') {
       setErrors(["Price must be a number"])
     }
+    else if (!regex.test(price)) {
+      setErrors(["Price must be at max 2 decimals: xx.xx"])
+    }
     else if (location.length === 0) {
       setErrors(["Please input the location of your event"])
     }
@@ -101,6 +103,7 @@ function EditEventForm({ openModal }) {
       setErrors(["Please input a picture url"])
     }
 
+    console.log(errors.length, "============== # of Errors")
 
     const payload = {
       ...event,
@@ -112,7 +115,6 @@ function EditEventForm({ openModal }) {
       pic_url
     }
 
-    // console.log(time)
 
     if (!errors.length) {
       let editedEvent = await dispatch(updateEvent(payload, eventId))

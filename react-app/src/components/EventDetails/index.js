@@ -20,6 +20,8 @@ const EventDetails = () => {
   // console.log(events)
   const thisEvent = events?.find((event) => event.id === +eventId)
 
+
+
   const openModal = () => {
     setShowEditEvent(!showEditEvent)
   }
