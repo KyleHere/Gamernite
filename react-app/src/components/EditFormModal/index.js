@@ -16,8 +16,8 @@ function EditEventForm({ openModal }) {
   const event = useSelector((state) => state?.eventsReducer[eventId])
   const tickets = useSelector(state => Object.values(state.ticketsReducer))
 
-  // const regex = new RegExp("^\d+\.*\d{0,2}$");
-  const regex = new RegExp(/^\d+(?:\.\d{0,2})$/)
+  const regex = new RegExp(/^\d+\.*\d{0,2}$/);
+  // const regex = new RegExp(/^\d+(?:\.\d{0,2})$/)
 
   // const numEventId = Number(eventId)
   const filtered = tickets.filter((ticket) => ticket.event_id === +eventId)
