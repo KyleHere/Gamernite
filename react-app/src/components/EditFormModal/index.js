@@ -24,15 +24,12 @@ function EditEventForm({ openModal }) {
 
   const newTime = new Date(event?.time)
 
-
+  //to preview date
   let newMonth;
-  let tester = String(newTime?.getMonth() + 1) //getMonth() returns a number usually so .length returns unexpected
-  // console.log(tester, "=============== BEFORE TEST");
+  let tester = String(newTime?.getMonth() + 1)
   if (tester.length < 2 && tester.length > 0) {
-    // console.log('inside') //brute force month conversion for months before OCT
     newMonth = `0${tester}`
   }
-
 
   let newDay;
   let tester2 = String(newTime.getDate())
@@ -53,7 +50,9 @@ function EditEventForm({ openModal }) {
     newHour = `0${newTime.getUTCHours()}`
   }
 
-
+  const today = new Date()
+  const todayString = `${today.toISOString().split('T')[0]}T00:00`
+  // console.log(todayString)
 
   const [name, setName] = useState(event?.name)
   const [description, setDescription] = useState(event?.description)
@@ -64,48 +63,49 @@ function EditEventForm({ openModal }) {
   const [pic_url, setPic_Url] = useState(event?.pic_url)
   const [errors, setErrors] = useState([]);
 
+  console.log(typeof (price))
+
   useEffect(() => {
     dispatch(allTickets(user.id))
   }, [])
 
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-
-
+    let error = [];
 
     if (name.length === 0) {
-      errors.push("Please enter the name of the event")
+      error.push("Please enter the name of the event")
     }
-    else if (name.length > 50) {
-      errors.push("Name of event must be less than 50 characters")
+    if (name.length > 50) {
+      error.push("Name of event must be less than 50 characters")
     }
-    else if (description.length === 0) {
-      errors.push("Please describe your event")
+    if (description.length === 0) {
+      error.push("Please describe your event")
     }
-    else if (time.length === 0) {
-      errors.push("Please provide time & date of event")
+    if (time.length === 0) {
+      error.push("Please provide time & date of event")
     }
-    else if (price.length === 0) {
-      errors.push("Please enter a ticket price")
+    if (price.length === 0) {
+      error.push("Please enter a ticket price")
     }
-    else if (typeof (price) !== 'number') {
-      errors.push("Price must be a number")
+    if (typeof (Number(price) !== 'number')) {
+      error.push("Price must be a number")
     }
-    else if (!regex.test(price)) {
-      errors.push("Price must be at max 2 decimals: xx.xx")
+    if (!regex.test(price)) {
+      error.push("Price must be at max 2 decimals: xx.xx")
     }
-    else if (location.length === 0) {
-      errors.push("Please input the location of your event")
+    if (location.length === 0) {
+      error.push("Please input the location of your event")
     }
-    else if (pic_url.length === 0) {
-      errors.push("Please input a picture url")
+    if (pic_url.length === 0) {
+      error.push("Please input a picture url")
     }
-
-    console.log(errors.length, "============== # of Errors")
-    console.log(errors, "============== List of Errors")
+    // console.log(error)
+    setErrors(error)
+    // console.log(errors.length, "============== # of Errors")
+    // console.log(errors, "============== List of Errors")
 
     const payload = {
       ...event,
@@ -118,7 +118,7 @@ function EditEventForm({ openModal }) {
     }
 
 
-    if (!errors.length) {
+    if (!error.length) {
       let editedEvent = await dispatch(updateEvent(payload, eventId))
       if (editedEvent) {
         openModal()
@@ -150,7 +150,7 @@ function EditEventForm({ openModal }) {
       <form onSubmit={handleSubmit}>
         <div className="error_text">
           {errors.map((error, ind) => (
-            <div key={ind}>{error}</div>
+            <div key={ind}>*{error}</div>
           ))}
         </div>
         <h3>Edit your Event</h3>
@@ -161,7 +161,7 @@ function EditEventForm({ openModal }) {
         </div>
         <div className="form_input_div">
           <label>Time</label>
-          <input type="datetime-local" className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
+          <input type="datetime-local" min={todayString} className="form_inputs" value={time} placeholder='Time' onChange={(e) => setTime(e.target.value)} />
         </div>
         <div className="form_input_div">
           <label>Price</label>
