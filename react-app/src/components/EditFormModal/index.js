@@ -30,7 +30,7 @@ function EditEventForm({ openModal }) {
   console.log(newTime.getMonth() + 1)
   if (tester.length < 2 && tester.length > 0) {
     newMonth = `0${tester}`
-    console.log(newMonth, "===========NEW Month")
+
   }
 
   let newDay;
@@ -129,7 +129,6 @@ function EditEventForm({ openModal }) {
   }
 
   const handleDelete = () => {
-    openModal()
 
     for (let i = 0; i < filtered.length; i++) {
       dispatch(deleteOneTicket(filtered[i].id))
@@ -137,6 +136,7 @@ function EditEventForm({ openModal }) {
 
     dispatch(deleteEvent(eventId))
       .then(() => {
+        openModal()
         return history.push('/')
       })
 
@@ -150,8 +150,10 @@ function EditEventForm({ openModal }) {
             <div key={ind}>*{error}</div>
           ))}
         </div>
-        <h3>Edit your Event</h3>
-        <button className="delete_form_button" onClick={handleDelete}>Delete Event</button>
+        <h3 className="h3_text">Edit your Event</h3>
+        <div className="delete_form_button_div">
+          <button className="delete_form_button" onClick={handleDelete}>Delete Event</button>
+        </div>
         <div className="form_input_div">
           <label>Name</label>
           <input type="text" className="form_inputs" value={name} placeholder='Name' onChange={(e) => setName(e.target.value)} />

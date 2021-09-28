@@ -11,15 +11,10 @@ const Homepage = () => {
   // const tickets = useSelector(state => Object.values(state.ticketsReducer))
   const dispatch = useDispatch();
 
-  // let imageChecker;
-  // if (event?.pic_url.includes("jpeg") || event?.pic_url.includes("jpg") || event?.pic_url.includes("png") || event?.pic_url.includes("image")) {
-  //   imageChecker = <img className="good_image" src={event?.image} alt={event?.title}></img>
-  // } else {
-  //   imageChecker = <img className="bad_image" alt={event?.title}></img>
-  // }
 
 
   useEffect(() => {
+    console.log('SOMETHING HAPPENING ')
     dispatch(allEvents())
   }, [])
 

@@ -55,7 +55,12 @@
   height:30px;
   border:1px white solid;
   border-radius: 20px;
+
   /* padding-right: 10px; */
+}
+
+.profile_img:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .login_navbar{

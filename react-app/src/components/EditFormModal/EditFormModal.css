@@ -35,7 +35,7 @@
 
 .delete_form_button{
   padding: 8px;
-  background-color:#FE5F55;
+  background-color:#F25757;
   text-decoration: none;
   color: black;
   border-radius: 4px;
@@ -48,11 +48,35 @@
 }
 
 .delete_form_button:hover{
-  background-color: #FE4134;
+  background-color: #BE0E0E;
   cursor: pointer;
 }
 
 
 .error_text{
   color:red
+}
+
+.h3_text{
+  display:flex;
+  justify-content: center;
+}
+
+.delete_form_button_div{
+  display: flex;
+  justify-content: center;
+}
+
+.edit_form_button{
+  padding: 2px;
+  background-color:#EAF2E3;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 14px;
+
+  min-width: 50px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 15px;
 }

@@ -52,7 +52,7 @@ export const getOneEvent = (id) => async dispatch => {
 }
 
 export const createNewEvent = (payload) => async dispatch => {
-  console.log('PAYLOAD =============', payload)
+
   const res = await fetch('/api/events/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -61,7 +61,7 @@ export const createNewEvent = (payload) => async dispatch => {
 
   if (res.ok) {
     const data = await res.json();
-    console.log('DATA =========================', data)
+
     await dispatch(createEvent(data))
     return data
   }
@@ -83,13 +83,12 @@ export const updateEvent = (payload, id) => async dispatch => {
 }
 
 export const deleteEvent = (id) => async dispatch => {
-  console.log('ID ---------------------', id)
   const res = await fetch(`/api/events/${id}`, {
     method: 'DELETE'
   })
-  console.log('RES --------------------', res.json())
+
   if (res.ok) {
-    // const deleted = await res.json();
+    await res.json();
     dispatch(deleteOne(id))
     return res
   }
@@ -105,7 +104,7 @@ export default function eventsReducer(state = initialState, action) {
   // const newState = { ...state }
   switch (action.type) {
     case GET_EVENTS: {
-      return { ...state, ...action.events }
+      return { ...action.events }
     }
     case CREATE_EVENT: {
       const newState = { ...state, }
