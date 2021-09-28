@@ -40,7 +40,8 @@ const EventDetails = () => {
     <div className="event_detail_entire">
       <div className="event_detail_container">
         <div className="event_detail_img_container">
-          <img className="event_detail_img" src={thisEvent?.pic_url} />
+          {/* <img className="event_detail_img" src={thisEvent?.pic_url} /> */}
+          {thisEvent?.pic_url.includes("jpeg") || thisEvent?.pic_url.includes("jpg") || thisEvent?.pic_url.includes("png") || thisEvent?.pic_url.includes("image") ? <img className="event_detail_img" src={thisEvent?.pic_url} /> : <img className="event_default_img" src="https://static.thenounproject.com/png/340719-200.png" />}
         </div>
         <div>
           <div className="event_detail">
