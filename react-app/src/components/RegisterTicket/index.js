@@ -25,9 +25,15 @@ const RegisterTicketForm = ({ openTicketModal }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    let error = []
+
     if (num_ticket.length === 0) {
-      setErrors(["Please input the number of tickets to purchase"])
+      error.push("Please input the number of tickets to purchase")
     }
+    if (isNaN(num_ticket)) {
+      error.push("Input must be a number")
+    }
+    setErrors(error)
 
     const payload = {
       user_id,
@@ -71,7 +77,7 @@ const RegisterTicketForm = ({ openTicketModal }) => {
       </form>
       <div>
         <span>
-        
+
         </span>
       </div>
     </div>
