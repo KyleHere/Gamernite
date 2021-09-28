@@ -26,6 +26,16 @@
   width:350px;
 }
 
+.event_pic:before{
+  /* content: ' ';
+  display: block;
+  position: absolute;
+  height: 250px;
+  width: 350px;
+  background-image: url('https://static.thenounproject.com/png/340719-200.png'); */
+  /* cover */
+}
+
 .homepage_content{
 padding-top: 70px;
 }
@@ -79,4 +89,5 @@ body{
 
 .spacing{
   height:100px;
+  margin-bottom: 200px;
 }

@@ -11,6 +11,14 @@ const Homepage = () => {
   // const tickets = useSelector(state => Object.values(state.ticketsReducer))
   const dispatch = useDispatch();
 
+  // let imageChecker;
+  // if (event?.pic_url.includes("jpeg") || event?.pic_url.includes("jpg") || event?.pic_url.includes("png") || event?.pic_url.includes("image")) {
+  //   imageChecker = <img className="good_image" src={event?.image} alt={event?.title}></img>
+  // } else {
+  //   imageChecker = <img className="bad_image" alt={event?.title}></img>
+  // }
+
+
   useEffect(() => {
     dispatch(allEvents())
   }, [])
@@ -29,8 +37,10 @@ const Homepage = () => {
         (
           <Link className="event_card" to={`/events/${event.id}`}>
             <div className="event_item" key={event.id}>
+              {event?.pic_url.includes("jpeg") || event?.pic_url.includes("jpg") || event?.pic_url.includes("png") || event?.pic_url.includes("image") ? <img className="event_pic" src={event?.pic_url} /> : <img className="event_pic" src="https://static.thenounproject.com/png/340719-200.png" />}
 
-              <img className="event_pic" src={event.pic_url} />
+
+              {/* <img className="event_pic" src={imageChecker} /> */}
 
               <div className="event_info">
                 {/* <Link to={`/events/${event.id}`}> */}

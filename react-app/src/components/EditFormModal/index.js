@@ -26,9 +26,11 @@ function EditEventForm({ openModal }) {
 
   //to preview date
   let newMonth;
-  let tester = String(newTime?.getMonth() + 1)
+  let tester = String(newTime.getMonth() + 1)
+  console.log(newTime.getMonth() + 1)
   if (tester.length < 2 && tester.length > 0) {
     newMonth = `0${tester}`
+    console.log(newMonth, "===========NEW Month")
   }
 
   let newDay;
@@ -57,11 +59,13 @@ function EditEventForm({ openModal }) {
   const [name, setName] = useState(event?.name)
   const [description, setDescription] = useState(event?.description)
 
-  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? newMonth : newTime?.getMonth()}-${tester2.length < 2 ? newDay : newTime?.getDate()}T${tester4.length < 2 ? newHour : newTime?.getUTCHours()}:${tester3.length < 2 ? newMinute : newTime.getMinutes()}`)
+  const [time, setTime] = useState(`${newTime.getFullYear()}-${tester.length < 2 ? newMonth : newTime?.getMonth() + 1}-${tester2.length < 2 ? newDay : newTime?.getDate()}T${tester4.length < 2 ? newHour : newTime?.getUTCHours()}:${tester3.length < 2 ? newMinute : newTime.getMinutes()}`)
   const [price, setPrice] = useState(event?.price)
   const [location, setLocation] = useState(event?.location)
   const [pic_url, setPic_Url] = useState(event?.pic_url)
   const [errors, setErrors] = useState([]);
+
+  // console.log(time)
 
   useEffect(() => {
     dispatch(allTickets(user.id))
