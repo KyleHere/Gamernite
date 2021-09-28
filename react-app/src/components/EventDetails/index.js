@@ -49,7 +49,9 @@ const EventDetails = () => {
           </div>
 
           <div className="event_detail">
-            <p>{thisEvent?.time}</p>
+            <p>{thisEvent?.time.slice(0, -12)} <br /> {new Date(thisEvent?.time).getUTCHours()}:{new Date(thisEvent?.time).getMinutes()}</p>
+
+            {/* <p></p> */}
           </div>
           <div className="event_detail">
             <p>${Number(thisEvent?.price).toFixed(2)}</p>

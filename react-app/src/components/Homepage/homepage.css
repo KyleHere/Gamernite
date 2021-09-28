@@ -78,7 +78,7 @@ body{
 
 .welcome_banner_img{
   /* position:relative; */
-  height: 600px;
+  height: 500px;
   width: 100%;
   object-fit:fill
 }

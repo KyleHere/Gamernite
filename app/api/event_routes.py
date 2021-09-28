@@ -26,7 +26,7 @@ def create_event():
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         data = form.data
-        print(data, "================DATA")
+
         new_event = Event(
             user_id=user.id,
             name=data['name'],
@@ -36,7 +36,7 @@ def create_event():
             location=data['location'],
             pic_url=data['pic_url'],
         )
-        print(new_event, "=======================EVENT")
+
         db.session.add(new_event)
         db.session.commit()
 

@@ -53,7 +53,8 @@ const TicketsPage = () => {
               <Link to={`/events/${singleEvent?.id}`}>
                 <div className="single_event_container">
                   <div className="single_event_div">
-                    <img className="single_event_pic" src={singleEvent?.pic_url} />
+                    {singleEvent?.pic_url.includes("jpeg") || singleEvent?.pic_url.includes("jpg") || singleEvent?.pic_url.includes("png") || singleEvent?.pic_url.includes("image") ? <img className="single_event_pic" src={singleEvent?.pic_url} /> : <img className="single_event_pic" src="https://static.thenounproject.com/png/340719-200.png" />}
+                    {/* <img className="single_event_pic" src={singleEvent?.pic_url} /> */}
                   </div>
                   <div className="single_event_text">
                     <p>{singleEvent?.name}</p>
