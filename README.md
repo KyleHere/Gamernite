@@ -1,10 +1,10 @@
-# Artygram
+# Gamernite
 
 Wiki: https://github.com/KyleHere/Gamernite
 
-Live Demo: https://gamernite.herokuapp.com/	
+Live Demo: https://gamernite.herokuapp.com/
 
-Gamernite is an Eventbrite clone that focuses on gamers (conventions, expos and tournaments) 
+Gamernite is an Eventbrite clone that focuses on gamers (conventions, expos and tournaments)
 
 ## Technologies
 * <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=JavaScript&logoColor=333333" /></a>
@@ -32,11 +32,11 @@ Gamernite is an Eventbrite clone that focuses on gamers (conventions, expos and 
 
 ## Technical Details
 
-Gamernite's backend is built using Flask and it's frontend is built using React-Redux 
+Gamernite's backend is built using Flask and it's frontend is built using React-Redux
 
-## Features 
+## Features
 
-- Signup, Login and Demo a user 
+- Signup, Login and Demo a user
 - Creating New Events, Purhcasing Tickets
 - Event Feed
 - Ticket Feed
