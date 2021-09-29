@@ -40,7 +40,7 @@ const TicketsPage = () => {
     // history.push(`/tickets/${user.id}`)
   }
   // const singleEvent = events?.find((event) => event.id === +eventId)
-  console.log(user.id === +userId);
+  // console.log(user.id === +userId);
   if (user?.id === +userId) {
     return (
       <div className="ticket_container">
