@@ -49,3 +49,16 @@
   background-color: #C48C6E;
   cursor: pointer;
 }
+
+.color_box{
+  /* background-color: red; */
+  padding-top: 70px;
+  height: 200px;
+  width: 200px;
+}
+
+.wrong_user_h3{
+  color: red;
+  padding-top: 30px;
+  padding-left: 40px;
+}
