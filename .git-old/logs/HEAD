@@ -1,0 +1,197 @@
+0000000000000000000000000000000000000000 a08109eb48a01e65fcb15fc20c04afa354372228 kyle <ktseng122@gmail.com> 1629905340 -0400	commit (initial): First commit
+a08109eb48a01e65fcb15fc20c04afa354372228 0000000000000000000000000000000000000000 kyle <ktseng122@gmail.com> 1629905346 -0400	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 a08109eb48a01e65fcb15fc20c04afa354372228 kyle <ktseng122@gmail.com> 1629905346 -0400	Branch: renamed refs/heads/master to refs/heads/main
+a08109eb48a01e65fcb15fc20c04afa354372228 c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 kyle <ktseng122@gmail.com> 1629919888 -0400	commit: Completed(?) bookmark model
+c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 kyle <ktseng122@gmail.com> 1629919903 -0400	checkout: moving from main to db_models
+c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 c53bc213eec1f211b352868bbb590392d9fe220c kyle <ktseng122@gmail.com> 1629944978 -0400	commit: Added bookmarks and events table to db
+c53bc213eec1f211b352868bbb590392d9fe220c dbe12e86e797edb43af658b3db24d441052f8c6d kyle <ktseng122@gmail.com> 1629954107 -0400	commit: Added Tickets table
+dbe12e86e797edb43af658b3db24d441052f8c6d d28ebcb05acf007f4ce666959695ce7be8d7d94a kyle <ktseng122@gmail.com> 1629954203 -0400	commit: ticket migration file
+d28ebcb05acf007f4ce666959695ce7be8d7d94a c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 kyle <ktseng122@gmail.com> 1629955857 -0400	checkout: moving from db_models to main
+c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 kyle <ktseng122@gmail.com> 1629955891 -0400	checkout: moving from main to homepage
+c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 170d028283263629d64e6554d8e9d82e62f46e64 kyle <ktseng122@gmail.com> 1629959534 -0400	commit: Added favicon and homepage route
+170d028283263629d64e6554d8e9d82e62f46e64 c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 kyle <ktseng122@gmail.com> 1629992644 -0400	checkout: moving from homepage to main
+c5ba1beb2ecb65be82f1cc8a44870c40b7d9a023 6a002ca33e179d6570477a7bda412e7fb6144d81 kyle <ktseng122@gmail.com> 1629992646 -0400	pull: Fast-forward
+6a002ca33e179d6570477a7bda412e7fb6144d81 170d028283263629d64e6554d8e9d82e62f46e64 kyle <ktseng122@gmail.com> 1629992650 -0400	checkout: moving from main to homepage
+170d028283263629d64e6554d8e9d82e62f46e64 6a002ca33e179d6570477a7bda412e7fb6144d81 kyle <ktseng122@gmail.com> 1629992652 -0400	merge main: Fast-forward
+6a002ca33e179d6570477a7bda412e7fb6144d81 6a002ca33e179d6570477a7bda412e7fb6144d81 kyle <ktseng122@gmail.com> 1630036586 -0400	checkout: moving from homepage to login_validators
+6a002ca33e179d6570477a7bda412e7fb6144d81 4292872deabc9141645307a508c8981017914467 kyle <ktseng122@gmail.com> 1630039707 -0400	commit: Fixed stupid models spelling
+4292872deabc9141645307a508c8981017914467 4292872deabc9141645307a508c8981017914467 kyle <ktseng122@gmail.com> 1630077958 -0400	checkout: moving from login_validators to seeds
+4292872deabc9141645307a508c8981017914467 6a002ca33e179d6570477a7bda412e7fb6144d81 kyle <ktseng122@gmail.com> 1630077970 -0400	checkout: moving from seeds to main
+6a002ca33e179d6570477a7bda412e7fb6144d81 6a002ca33e179d6570477a7bda412e7fb6144d81 kyle <ktseng122@gmail.com> 1630077985 -0400	checkout: moving from main to seeds
+6a002ca33e179d6570477a7bda412e7fb6144d81 11b301d971bad638af5ab4c10dcb743e82742d30 kyle <ktseng122@gmail.com> 1630078026 -0400	commit: Added error handling and simple styling
+11b301d971bad638af5ab4c10dcb743e82742d30 9ab70cc39780c9fec831f63138ee203ba53fad71 kyle <ktseng122@gmail.com> 1630078828 -0400	commit: all seeds
+9ab70cc39780c9fec831f63138ee203ba53fad71 8373f7c8d103024f4b21001beb8f22a7f5aa542b kyle <ktseng122@gmail.com> 1630082595 -0400	commit: Filled out seeds
+8373f7c8d103024f4b21001beb8f22a7f5aa542b 6a002ca33e179d6570477a7bda412e7fb6144d81 kyle <ktseng122@gmail.com> 1630082598 -0400	checkout: moving from seeds to main
+6a002ca33e179d6570477a7bda412e7fb6144d81 4292872deabc9141645307a508c8981017914467 kyle <ktseng122@gmail.com> 1630082615 -0400	checkout: moving from main to login_validators
+4292872deabc9141645307a508c8981017914467 8373f7c8d103024f4b21001beb8f22a7f5aa542b kyle <ktseng122@gmail.com> 1630082637 -0400	checkout: moving from login_validators to seeds
+8373f7c8d103024f4b21001beb8f22a7f5aa542b f5bc104fdacfcbfe22f55ba84b0b8646f8017205 kyle <ktseng122@gmail.com> 1630085568 -0400	commit: Completed ALL seeders
+f5bc104fdacfcbfe22f55ba84b0b8646f8017205 6a002ca33e179d6570477a7bda412e7fb6144d81 kyle <ktseng122@gmail.com> 1630085602 -0400	checkout: moving from seeds to main
+6a002ca33e179d6570477a7bda412e7fb6144d81 e2eaad71625d131da52f456aaac11d538f8becd3 kyle <ktseng122@gmail.com> 1630085604 -0400	pull: Fast-forward
+e2eaad71625d131da52f456aaac11d538f8becd3 e2eaad71625d131da52f456aaac11d538f8becd3 kyle <ktseng122@gmail.com> 1630085650 -0400	checkout: moving from main to backend_events
+e2eaad71625d131da52f456aaac11d538f8becd3 e2eaad71625d131da52f456aaac11d538f8becd3 kyle <ktseng122@gmail.com> 1630092226 -0400	checkout: moving from backend_events to main
+e2eaad71625d131da52f456aaac11d538f8becd3 6dd256a40bf462d1251c55c68a15146b949f1bbb kyle <ktseng122@gmail.com> 1630092331 -0400	commit: Another migration folder
+6dd256a40bf462d1251c55c68a15146b949f1bbb bfb940947872d80e877a37fe401187dcd9a74708 kyle <ktseng122@gmail.com> 1630096935 -0400	commit: heroku commit
+bfb940947872d80e877a37fe401187dcd9a74708 a8296977fd2ea57d06a25715fc17467ca8085679 kyle <ktseng122@gmail.com> 1630097203 -0400	commit: Will it work
+a8296977fd2ea57d06a25715fc17467ca8085679 30743aa8f891887d2e325c5192f2f685ad0a06ea kyle <ktseng122@gmail.com> 1630099385 -0400	commit: FINAL MIGRATION?
+30743aa8f891887d2e325c5192f2f685ad0a06ea 2588c72350c95835f9530de74f8fcad28525b027 kyle <ktseng122@gmail.com> 1630329183 -0400	commit: Completed event read route
+2588c72350c95835f9530de74f8fcad28525b027 2588c72350c95835f9530de74f8fcad28525b027 kyle <ktseng122@gmail.com> 1630329214 -0400	checkout: moving from main to event_crud
+2588c72350c95835f9530de74f8fcad28525b027 2bcfc6fba444a10e3270f3de4a6711c7d7d5a9f2 kyle <ktseng122@gmail.com> 1630330127 -0400	commit: Fleshed out the action thunks
+2bcfc6fba444a10e3270f3de4a6711c7d7d5a9f2 2588c72350c95835f9530de74f8fcad28525b027 kyle <ktseng122@gmail.com> 1630330133 -0400	checkout: moving from event_crud to main
+2588c72350c95835f9530de74f8fcad28525b027 2bcfc6fba444a10e3270f3de4a6711c7d7d5a9f2 kyle <ktseng122@gmail.com> 1630330139 -0400	checkout: moving from main to event_crud
+2bcfc6fba444a10e3270f3de4a6711c7d7d5a9f2 014e5b4941d03ef305c9bda45f95c14fa9ecab17 kyle <ktseng122@gmail.com> 1630337474 -0400	commit: Added a new event form and updated event route
+014e5b4941d03ef305c9bda45f95c14fa9ecab17 04824f7c4ef57e8d7e79c2333d1f34ee74b629f2 kyle <ktseng122@gmail.com> 1630337890 -0400	commit: Completed Create event function
+04824f7c4ef57e8d7e79c2333d1f34ee74b629f2 f215601b9edcab3ce81bf7ac5b7a37ca251063e5 kyle <ktseng122@gmail.com> 1630359130 -0400	commit: Added edit modal
+f215601b9edcab3ce81bf7ac5b7a37ca251063e5 d2949bf21d2942e5ae6091f55d4196aae9bad97b kyle <ktseng122@gmail.com> 1630382534 -0400	commit: Completed update functionality
+d2949bf21d2942e5ae6091f55d4196aae9bad97b 2ea331abaf1a18255ce026ca9c4bad65239d885a kyle <ktseng122@gmail.com> 1630384101 -0400	commit: Completed delete route for events
+2ea331abaf1a18255ce026ca9c4bad65239d885a 2588c72350c95835f9530de74f8fcad28525b027 kyle <ktseng122@gmail.com> 1630386888 -0400	checkout: moving from event_crud to main
+2588c72350c95835f9530de74f8fcad28525b027 b857d07a2ca9a951f6d4c509d431d03eee2a3bfa kyle <ktseng122@gmail.com> 1630386889 -0400	pull: Fast-forward
+b857d07a2ca9a951f6d4c509d431d03eee2a3bfa b857d07a2ca9a951f6d4c509d431d03eee2a3bfa kyle <ktseng122@gmail.com> 1630386894 -0400	checkout: moving from main to navbar
+b857d07a2ca9a951f6d4c509d431d03eee2a3bfa e7a37c572d8a61ee7da7aeb526efa3ef83629193 kyle <ktseng122@gmail.com> 1630391474 -0400	commit: Complete simple navbar styling (no colors)
+e7a37c572d8a61ee7da7aeb526efa3ef83629193 e7a37c572d8a61ee7da7aeb526efa3ef83629193 kyle <ktseng122@gmail.com> 1630391491 -0400	checkout: moving from navbar to homepage
+e7a37c572d8a61ee7da7aeb526efa3ef83629193 7624d9aaf289453aa18e0b7175db84921641a4f4 kyle <ktseng122@gmail.com> 1630393635 -0400	commit: Homepage styling TBC
+7624d9aaf289453aa18e0b7175db84921641a4f4 74dda64bd18b39e0243b032b585b1d4db75d5eea kyle <ktseng122@gmail.com> 1630424100 -0400	commit: navbar changes
+74dda64bd18b39e0243b032b585b1d4db75d5eea 6b8003ccc2d811cf1f87a521dced175ea9e938c4 kyle <ktseng122@gmail.com> 1630430567 -0400	commit: heroku temp push
+6b8003ccc2d811cf1f87a521dced175ea9e938c4 353d6244011eaa28373bf9468a56860ffbed6a17 kyle <ktseng122@gmail.com> 1630434471 -0400	commit: another heroku push
+353d6244011eaa28373bf9468a56860ffbed6a17 956cc382fcfa74cc435549ec772ba29b61c347bd kyle <ktseng122@gmail.com> 1630446637 -0400	commit: please heroku work
+956cc382fcfa74cc435549ec772ba29b61c347bd 956cc382fcfa74cc435549ec772ba29b61c347bd kyle <ktseng122@gmail.com> 1630446853 -0400	checkout: moving from homepage to tickets_page
+956cc382fcfa74cc435549ec772ba29b61c347bd e7a37c572d8a61ee7da7aeb526efa3ef83629193 kyle <ktseng122@gmail.com> 1630446867 -0400	checkout: moving from tickets_page to navbar
+e7a37c572d8a61ee7da7aeb526efa3ef83629193 956cc382fcfa74cc435549ec772ba29b61c347bd kyle <ktseng122@gmail.com> 1630446872 -0400	checkout: moving from navbar to homepage
+956cc382fcfa74cc435549ec772ba29b61c347bd e2eaad71625d131da52f456aaac11d538f8becd3 kyle <ktseng122@gmail.com> 1630446876 -0400	checkout: moving from homepage to backend_events
+e2eaad71625d131da52f456aaac11d538f8becd3 956cc382fcfa74cc435549ec772ba29b61c347bd kyle <ktseng122@gmail.com> 1630446881 -0400	checkout: moving from backend_events to tickets_page
+956cc382fcfa74cc435549ec772ba29b61c347bd 64e640ead151a1bd65bbda6b1ec7591f6cbe4f7c kyle <ktseng122@gmail.com> 1630505560 -0400	commit: Added tickets page and routes to show tickets
+64e640ead151a1bd65bbda6b1ec7591f6cbe4f7c 988385a617d5c8c73d442e9a4b7cef518276fb1a kyle <ktseng122@gmail.com> 1630508464 -0400	commit: ticket work
+988385a617d5c8c73d442e9a4b7cef518276fb1a b857d07a2ca9a951f6d4c509d431d03eee2a3bfa kyle <ktseng122@gmail.com> 1630508466 -0400	checkout: moving from tickets_page to main
+b857d07a2ca9a951f6d4c509d431d03eee2a3bfa 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630508468 -0400	pull: Fast-forward
+844055b41c9a66dc1dd056398c1644b1e0fcfaed 988385a617d5c8c73d442e9a4b7cef518276fb1a kyle <ktseng122@gmail.com> 1630508471 -0400	checkout: moving from main to tickets_page
+988385a617d5c8c73d442e9a4b7cef518276fb1a 85e2d638162915919cc77b4907c8b903e18f6106 kyle <ktseng122@gmail.com> 1630508495 -0400	commit (merge): Merge branch 'main' into tickets_page
+85e2d638162915919cc77b4907c8b903e18f6106 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630508630 -0400	checkout: moving from tickets_page to main
+844055b41c9a66dc1dd056398c1644b1e0fcfaed 85e2d638162915919cc77b4907c8b903e18f6106 kyle <ktseng122@gmail.com> 1630508711 -0400	checkout: moving from main to tickets_page
+85e2d638162915919cc77b4907c8b903e18f6106 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630509243 -0400	checkout: moving from tickets_page to main
+844055b41c9a66dc1dd056398c1644b1e0fcfaed 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630509261 -0400	checkout: moving from main to tickets_crud
+844055b41c9a66dc1dd056398c1644b1e0fcfaed 85e2d638162915919cc77b4907c8b903e18f6106 kyle <ktseng122@gmail.com> 1630509273 -0400	checkout: moving from tickets_crud to tickets_page
+85e2d638162915919cc77b4907c8b903e18f6106 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630509280 -0400	checkout: moving from tickets_page to tickets_crud
+844055b41c9a66dc1dd056398c1644b1e0fcfaed 85e2d638162915919cc77b4907c8b903e18f6106 kyle <ktseng122@gmail.com> 1630509436 -0400	checkout: moving from tickets_crud to tickets_page
+85e2d638162915919cc77b4907c8b903e18f6106 da0c5b80c01948e5b5f74271629b2075255c8ea6 kyle <ktseng122@gmail.com> 1630515226 -0400	commit: Modal changes
+da0c5b80c01948e5b5f74271629b2075255c8ea6 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630515229 -0400	checkout: moving from tickets_page to main
+844055b41c9a66dc1dd056398c1644b1e0fcfaed da0c5b80c01948e5b5f74271629b2075255c8ea6 kyle <ktseng122@gmail.com> 1630515548 -0400	checkout: moving from main to tickets_page
+da0c5b80c01948e5b5f74271629b2075255c8ea6 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630515553 -0400	checkout: moving from tickets_page to tickets_crud
+844055b41c9a66dc1dd056398c1644b1e0fcfaed da0c5b80c01948e5b5f74271629b2075255c8ea6 kyle <ktseng122@gmail.com> 1630515566 -0400	checkout: moving from tickets_crud to tickets_page
+da0c5b80c01948e5b5f74271629b2075255c8ea6 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630515574 -0400	checkout: moving from tickets_page to tickets_crud
+844055b41c9a66dc1dd056398c1644b1e0fcfaed da0c5b80c01948e5b5f74271629b2075255c8ea6 kyle <ktseng122@gmail.com> 1630515577 -0400	checkout: moving from tickets_crud to tickets_page
+da0c5b80c01948e5b5f74271629b2075255c8ea6 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630516578 -0400	checkout: moving from tickets_page to main
+844055b41c9a66dc1dd056398c1644b1e0fcfaed da0c5b80c01948e5b5f74271629b2075255c8ea6 kyle <ktseng122@gmail.com> 1630516660 -0400	checkout: moving from main to tickets_page
+da0c5b80c01948e5b5f74271629b2075255c8ea6 da0c5b80c01948e5b5f74271629b2075255c8ea6 kyle <ktseng122@gmail.com> 1630516977 -0400	checkout: moving from tickets_page to tickets_page
+da0c5b80c01948e5b5f74271629b2075255c8ea6 c8a1453d7adc49b24153bac150d806c6e1a11416 kyle <ktseng122@gmail.com> 1630517532 -0400	commit: whatever bg
+c8a1453d7adc49b24153bac150d806c6e1a11416 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630517535 -0400	checkout: moving from tickets_page to main
+844055b41c9a66dc1dd056398c1644b1e0fcfaed 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630517547 -0400	checkout: moving from main to ticket_page2
+844055b41c9a66dc1dd056398c1644b1e0fcfaed 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630517656 -0400	checkout: moving from ticket_page2 to main
+844055b41c9a66dc1dd056398c1644b1e0fcfaed 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630517667 -0400	checkout: moving from main to ticket_page2
+844055b41c9a66dc1dd056398c1644b1e0fcfaed b5653e8e3b815ad212e19859a2100f95d28d77d8 kyle <ktseng122@gmail.com> 1630517675 -0400	commit: ticket store
+b5653e8e3b815ad212e19859a2100f95d28d77d8 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630517676 -0400	checkout: moving from ticket_page2 to main
+844055b41c9a66dc1dd056398c1644b1e0fcfaed c8a1453d7adc49b24153bac150d806c6e1a11416 kyle <ktseng122@gmail.com> 1630518190 -0400	checkout: moving from main to tickets_page
+c8a1453d7adc49b24153bac150d806c6e1a11416 663f5b77bf30357df4c03e42891d79717184a1af kyle <ktseng122@gmail.com> 1630529385 -0400	commit: Incomplete Create route for tickets
+663f5b77bf30357df4c03e42891d79717184a1af 71db6d0df1924663de2b9bbeaaa91f2948ac382b kyle <ktseng122@gmail.com> 1630536087 -0400	commit: Broken GET Tickets route
+71db6d0df1924663de2b9bbeaaa91f2948ac382b 53fc1a1495ec5adcba4bba7473a765f31aae391c kyle <ktseng122@gmail.com> 1630596507 -0400	commit: Added delete thunk action for tickets
+53fc1a1495ec5adcba4bba7473a765f31aae391c b2466155218449aeb4e250616ee9e9e581014d37 kyle <ktseng122@gmail.com> 1630597025 -0400	commit: Added delete backend for tickets
+b2466155218449aeb4e250616ee9e9e581014d37 44271fef0886e6eec85f8d634855a88bebb0ce99 kyle <ktseng122@gmail.com> 1630601469 -0400	commit: Fixed EVERYTHING
+44271fef0886e6eec85f8d634855a88bebb0ce99 7fe64947519e9b1685f644a97f2ffbd4818ad7f4 kyle <ktseng122@gmail.com> 1630604146 -0400	commit: heroku pushes
+7fe64947519e9b1685f644a97f2ffbd4818ad7f4 25416e74a15202737912d29a2214531ee9137748 kyle <ktseng122@gmail.com> 1630604297 -0400	commit: more heroku
+25416e74a15202737912d29a2214531ee9137748 07f5d55fd2c78889b9333ea8c1b3c4506537d20c kyle <ktseng122@gmail.com> 1630610148 -0400	commit: Broken Delete ticket route
+07f5d55fd2c78889b9333ea8c1b3c4506537d20c 844055b41c9a66dc1dd056398c1644b1e0fcfaed kyle <ktseng122@gmail.com> 1630610150 -0400	checkout: moving from tickets_page to main
+844055b41c9a66dc1dd056398c1644b1e0fcfaed db8ec485b9058332410b5b999847c19df09b2855 kyle <ktseng122@gmail.com> 1630610153 -0400	pull: Fast-forward
+db8ec485b9058332410b5b999847c19df09b2855 db8ec485b9058332410b5b999847c19df09b2855 kyle <ktseng122@gmail.com> 1630610159 -0400	checkout: moving from main to css
+db8ec485b9058332410b5b999847c19df09b2855 db8ec485b9058332410b5b999847c19df09b2855 kyle <ktseng122@gmail.com> 1630643165 -0400	checkout: moving from css to navbar
+db8ec485b9058332410b5b999847c19df09b2855 db8ec485b9058332410b5b999847c19df09b2855 kyle <ktseng122@gmail.com> 1630681408 -0400	reset: moving to HEAD
+db8ec485b9058332410b5b999847c19df09b2855 f7fe263cb0f071e89c0e52f43688d01d08ec1db5 kyle <ktseng122@gmail.com> 1630682687 -0400	commit: navbar signup/login complete
+f7fe263cb0f071e89c0e52f43688d01d08ec1db5 b5781c22cc1f84c3debc4398fb7727472251c4b7 kyle <ktseng122@gmail.com> 1630683117 -0400	commit: signed in navbar semi-done
+b5781c22cc1f84c3debc4398fb7727472251c4b7 2a02a2295293b16ac0b8de06189298acf11597fb kyle <ktseng122@gmail.com> 1630685545 -0400	commit: event details in progress
+2a02a2295293b16ac0b8de06189298acf11597fb 07f5d55fd2c78889b9333ea8c1b3c4506537d20c kyle <ktseng122@gmail.com> 1630685553 -0400	checkout: moving from navbar to tickets_page
+07f5d55fd2c78889b9333ea8c1b3c4506537d20c b5653e8e3b815ad212e19859a2100f95d28d77d8 kyle <ktseng122@gmail.com> 1630685568 -0400	checkout: moving from tickets_page to ticket_page2
+b5653e8e3b815ad212e19859a2100f95d28d77d8 db8ec485b9058332410b5b999847c19df09b2855 kyle <ktseng122@gmail.com> 1630685577 -0400	checkout: moving from ticket_page2 to main
+db8ec485b9058332410b5b999847c19df09b2855 07f5d55fd2c78889b9333ea8c1b3c4506537d20c kyle <ktseng122@gmail.com> 1630685583 -0400	checkout: moving from main to tickets_page
+07f5d55fd2c78889b9333ea8c1b3c4506537d20c 2a02a2295293b16ac0b8de06189298acf11597fb kyle <ktseng122@gmail.com> 1630691028 -0400	checkout: moving from tickets_page to navbar
+2a02a2295293b16ac0b8de06189298acf11597fb 19bc0c836eeab45af9bb3d1fdf3b910bd3de3574 kyle <ktseng122@gmail.com> 1630698165 -0400	commit: Everything still broken
+19bc0c836eeab45af9bb3d1fdf3b910bd3de3574 07f5d55fd2c78889b9333ea8c1b3c4506537d20c kyle <ktseng122@gmail.com> 1630698173 -0400	checkout: moving from navbar to tickets_page
+07f5d55fd2c78889b9333ea8c1b3c4506537d20c 07f5d55fd2c78889b9333ea8c1b3c4506537d20c kyle <ktseng122@gmail.com> 1630698996 -0400	checkout: moving from tickets_page to tickets_page
+07f5d55fd2c78889b9333ea8c1b3c4506537d20c 4361083d8842e45309a692ac73a9ad8d7e02b3b2 kyle <ktseng122@gmail.com> 1630706453 -0400	commit: Bless Kagen
+4361083d8842e45309a692ac73a9ad8d7e02b3b2 4dcd8c9c7229e392194d661336a6d22819bc8853 kyle <ktseng122@gmail.com> 1630899704 -0400	commit: tickets page changes
+4dcd8c9c7229e392194d661336a6d22819bc8853 db8ec485b9058332410b5b999847c19df09b2855 kyle <ktseng122@gmail.com> 1630988854 -0400	checkout: moving from tickets_page to css
+db8ec485b9058332410b5b999847c19df09b2855 db8ec485b9058332410b5b999847c19df09b2855 kyle <ktseng122@gmail.com> 1630988857 -0400	checkout: moving from css to main
+db8ec485b9058332410b5b999847c19df09b2855 aa693ccf19145e045857476a8b827e80174fd2f3 kyle <ktseng122@gmail.com> 1630988859 -0400	pull: Fast-forward
+aa693ccf19145e045857476a8b827e80174fd2f3 db8ec485b9058332410b5b999847c19df09b2855 kyle <ktseng122@gmail.com> 1630988861 -0400	checkout: moving from main to css
+db8ec485b9058332410b5b999847c19df09b2855 aa693ccf19145e045857476a8b827e80174fd2f3 kyle <ktseng122@gmail.com> 1630988864 -0400	merge main: Fast-forward
+aa693ccf19145e045857476a8b827e80174fd2f3 aa693ccf19145e045857476a8b827e80174fd2f3 kyle <ktseng122@gmail.com> 1630990993 -0400	checkout: moving from css to css
+aa693ccf19145e045857476a8b827e80174fd2f3 19bc0c836eeab45af9bb3d1fdf3b910bd3de3574 kyle <ktseng122@gmail.com> 1630991004 -0400	checkout: moving from css to navbar
+19bc0c836eeab45af9bb3d1fdf3b910bd3de3574 aa693ccf19145e045857476a8b827e80174fd2f3 kyle <ktseng122@gmail.com> 1630991060 -0400	checkout: moving from navbar to css
+aa693ccf19145e045857476a8b827e80174fd2f3 aa693ccf19145e045857476a8b827e80174fd2f3 kyle <ktseng122@gmail.com> 1630991065 -0400	checkout: moving from css to main
+aa693ccf19145e045857476a8b827e80174fd2f3 aa010a517076a0027fb246481e4b64f8dd5db3fd kyle <ktseng122@gmail.com> 1630991067 -0400	pull: Fast-forward
+aa010a517076a0027fb246481e4b64f8dd5db3fd aa693ccf19145e045857476a8b827e80174fd2f3 kyle <ktseng122@gmail.com> 1630991069 -0400	checkout: moving from main to css
+aa693ccf19145e045857476a8b827e80174fd2f3 aa010a517076a0027fb246481e4b64f8dd5db3fd kyle <ktseng122@gmail.com> 1630991070 -0400	merge main: Fast-forward
+aa010a517076a0027fb246481e4b64f8dd5db3fd ba3ad80fe2ebfd05df8754a0e950038eaab570b9 kyle <ktseng122@gmail.com> 1630993432 -0400	commit: added demo login
+ba3ad80fe2ebfd05df8754a0e950038eaab570b9 86d7c5a95b5fac21c58d80585352612e7cff39f2 kyle <ktseng122@gmail.com> 1630996822 -0400	commit: styled login and signup
+86d7c5a95b5fac21c58d80585352612e7cff39f2 7d6ca9c17c52a458e12846cd4e5ee5d9491e9bb1 kyle <ktseng122@gmail.com> 1630999467 -0400	commit: added welcome banner image
+7d6ca9c17c52a458e12846cd4e5ee5d9491e9bb1 6ecb76d913d0df77e912ea784a65da7e56c5c387 kyle <ktseng122@gmail.com> 1631002223 -0400	commit: added styling for new event page
+6ecb76d913d0df77e912ea784a65da7e56c5c387 588fb61a50c3f3da113fc8980cd7eb1193fc44af kyle <ktseng122@gmail.com> 1631018253 -0400	commit: Error validation for upload event
+588fb61a50c3f3da113fc8980cd7eb1193fc44af 87491183d6a557fb46431aafec9b012d87d60d44 kyle <ktseng122@gmail.com> 1631018582 -0400	commit: Added Error validation for register ticket
+87491183d6a557fb46431aafec9b012d87d60d44 c04bf1105d81e639c1fbe7a72c9e47205f6d4a7f kyle <ktseng122@gmail.com> 1631021678 -0400	commit: added unauthorization on tickets page for wrong user
+c04bf1105d81e639c1fbe7a72c9e47205f6d4a7f 81518d0c80baec15bd45c36324e1e55e3b0d0856 kyle <ktseng122@gmail.com> 1631023758 -0400	commit: Event detail styling
+81518d0c80baec15bd45c36324e1e55e3b0d0856 40f0c2e05c777c3c6c28b3dc76b0b7c6b7214dce kyle <ktseng122@gmail.com> 1631024248 -0400	commit: Event detail styling done:
+40f0c2e05c777c3c6c28b3dc76b0b7c6b7214dce 727bed147a134e3130e72a80457f45dccc0a8030 kyle <ktseng122@gmail.com> 1631027119 -0400	commit: Tickets page complete
+727bed147a134e3130e72a80457f45dccc0a8030 a586e1855ff47dbec8da3c6546a756b164c4ea18 kyle <ktseng122@gmail.com> 1631027665 -0400	commit: Finished product?
+a586e1855ff47dbec8da3c6546a756b164c4ea18 d3fe5f2bb7b544ac1f2523bff47ac15bb092cb17 kyle <ktseng122@gmail.com> 1631028667 -0400	commit: added footer
+d3fe5f2bb7b544ac1f2523bff47ac15bb092cb17 48a791598f607ac80461eeeaefe6092877ec769b kyle <ktseng122@gmail.com> 1631029190 -0400	commit: Finished styling
+48a791598f607ac80461eeeaefe6092877ec769b 04065743ba2751036950a36a6781008c3433ebab kyle <ktseng122@gmail.com> 1631029834 -0400	commit: Touch up
+04065743ba2751036950a36a6781008c3433ebab 4dcd8c9c7229e392194d661336a6d22819bc8853 kyle <ktseng122@gmail.com> 1632203126 -0400	checkout: moving from css to tickets_page
+4dcd8c9c7229e392194d661336a6d22819bc8853 04065743ba2751036950a36a6781008c3433ebab kyle <ktseng122@gmail.com> 1632203132 -0400	checkout: moving from tickets_page to css
+04065743ba2751036950a36a6781008c3433ebab aa010a517076a0027fb246481e4b64f8dd5db3fd kyle <ktseng122@gmail.com> 1632203137 -0400	checkout: moving from css to main
+aa010a517076a0027fb246481e4b64f8dd5db3fd ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632203138 -0400	pull: Fast-forward
+ff477ac42893df8303a3f0583883da08fe710350 04065743ba2751036950a36a6781008c3433ebab kyle <ktseng122@gmail.com> 1632203141 -0400	checkout: moving from main to css
+04065743ba2751036950a36a6781008c3433ebab ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632203144 -0400	merge main: Fast-forward
+ff477ac42893df8303a3f0583883da08fe710350 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632203183 -0400	checkout: moving from css to gap
+ff477ac42893df8303a3f0583883da08fe710350 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632207099 -0400	checkout: moving from gap to main
+ff477ac42893df8303a3f0583883da08fe710350 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632207124 -0400	checkout: moving from main to gap
+ff477ac42893df8303a3f0583883da08fe710350 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632207263 -0400	reset: moving to HEAD
+ff477ac42893df8303a3f0583883da08fe710350 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632207331 -0400	reset: moving to HEAD
+ff477ac42893df8303a3f0583883da08fe710350 eceded619037d9495273dba0b95af65daf325a08 kyle <ktseng122@gmail.com> 1632208325 -0400	commit: added error handling for new and edit form
+eceded619037d9495273dba0b95af65daf325a08 eceded619037d9495273dba0b95af65daf325a08 kyle <ktseng122@gmail.com> 1632208338 -0400	reset: moving to HEAD
+eceded619037d9495273dba0b95af65daf325a08 eceded619037d9495273dba0b95af65daf325a08 kyle <ktseng122@gmail.com> 1632208434 -0400	reset: moving to eceded619037d9495273dba0b95af65daf325a08
+eceded619037d9495273dba0b95af65daf325a08 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632208557 -0400	reset: moving to ff477ac42893df8303a3f0583883da08fe710350
+ff477ac42893df8303a3f0583883da08fe710350 d6e420afc79ac51ff7ae04759cb72dccb6263ff3 kyle <ktseng122@gmail.com> 1632208804 -0400	commit: added error handling for new and edit forms
+d6e420afc79ac51ff7ae04759cb72dccb6263ff3 9b02beb6a52604852c42e306bb23b2aa4b55067a kyle <ktseng122@gmail.com> 1632209343 -0400	commit: logout home redirect
+9b02beb6a52604852c42e306bb23b2aa4b55067a 7537d385705ce9cd8fc9fd987f4921784e273ef2 kyle <ktseng122@gmail.com> 1632210681 -0400	commit: Fixed upon event deletion, ticket boxes remained
+7537d385705ce9cd8fc9fd987f4921784e273ef2 7537d385705ce9cd8fc9fd987f4921784e273ef2 kyle <ktseng122@gmail.com> 1632350507 -0400	reset: moving to HEAD
+7537d385705ce9cd8fc9fd987f4921784e273ef2 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632350510 -0400	checkout: moving from gap to main
+ff477ac42893df8303a3f0583883da08fe710350 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632350894 -0400	reset: moving to HEAD
+ff477ac42893df8303a3f0583883da08fe710350 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632350897 -0400	reset: moving to HEAD
+ff477ac42893df8303a3f0583883da08fe710350 7537d385705ce9cd8fc9fd987f4921784e273ef2 kyle <ktseng122@gmail.com> 1632350908 -0400	checkout: moving from main to gap
+7537d385705ce9cd8fc9fd987f4921784e273ef2 b001edc8435e6e235920e86ec79297e4b2dab3a2 kyle <ktseng122@gmail.com> 1632351214 -0400	commit: Updated models and seeders
+b001edc8435e6e235920e86ec79297e4b2dab3a2 6414d985322a978772f66fc3de223f115cb4766e kyle <ktseng122@gmail.com> 1632352751 -0400	commit: temp
+6414d985322a978772f66fc3de223f115cb4766e ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632352755 -0400	checkout: moving from gap to main
+ff477ac42893df8303a3f0583883da08fe710350 42f68731802d5fa5858cc4bb83c859ab3f98191b kyle <ktseng122@gmail.com> 1632352764 -0400	pull: Fast-forward
+42f68731802d5fa5858cc4bb83c859ab3f98191b 7537d385705ce9cd8fc9fd987f4921784e273ef2 kyle <ktseng122@gmail.com> 1632352896 -0400	reset: moving to 7537d385705ce9cd8fc9fd987f4921784e273ef2
+7537d385705ce9cd8fc9fd987f4921784e273ef2 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632352979 -0400	reset: moving to ff477ac42893df8303a3f0583883da08fe710350
+ff477ac42893df8303a3f0583883da08fe710350 42f68731802d5fa5858cc4bb83c859ab3f98191b kyle <ktseng122@gmail.com> 1632353226 -0400	pull: Fast-forward
+42f68731802d5fa5858cc4bb83c859ab3f98191b 1f444a9307d39042e7ea7d5fe482667bc2a206a0 kyle <ktseng122@gmail.com> 1632353281 -0400	commit: deleted old migration
+1f444a9307d39042e7ea7d5fe482667bc2a206a0 6414d985322a978772f66fc3de223f115cb4766e kyle <ktseng122@gmail.com> 1632353290 -0400	checkout: moving from main to gap
+6414d985322a978772f66fc3de223f115cb4766e b6691470e4c0a42e37d8ea10703ac6d07b6f1655 kyle <ktseng122@gmail.com> 1632429277 -0400	commit: Restored create functionality
+b6691470e4c0a42e37d8ea10703ac6d07b6f1655 5d39b5a15945eb84e85a4ed059294b20369fb7e6 kyle <ktseng122@gmail.com> 1632430270 -0400	commit: incomplete prepopulate time field
+5d39b5a15945eb84e85a4ed059294b20369fb7e6 87bad0c2d40bbbd87a0e5a5d9d2302d5b73c206e kyle <ktseng122@gmail.com> 1632433532 -0400	commit: Corrected edit prepopulating time
+87bad0c2d40bbbd87a0e5a5d9d2302d5b73c206e 87bad0c2d40bbbd87a0e5a5d9d2302d5b73c206e kyle <ktseng122@gmail.com> 1632435327 -0400	reset: moving to HEAD
+87bad0c2d40bbbd87a0e5a5d9d2302d5b73c206e dd073fdac8629f8044ea0d7966e286e3683fff03 kyle <ktseng122@gmail.com> 1632438823 -0400	commit: Added more error handling for price and time
+dd073fdac8629f8044ea0d7966e286e3683fff03 ba81bce3cd61bd8b758aef1935ab13d61bc03945 kyle <ktseng122@gmail.com> 1632439322 -0400	commit: Heroku push
+ba81bce3cd61bd8b758aef1935ab13d61bc03945 ff65f5536f353c8900831943ded9f0802972fca9 kyle <ktseng122@gmail.com> 1632441137 -0400	commit: Fixed toFixed error
+ff65f5536f353c8900831943ded9f0802972fca9 ff65f5536f353c8900831943ded9f0802972fca9 kyle <ktseng122@gmail.com> 1632442219 -0400	reset: moving to HEAD
+ff65f5536f353c8900831943ded9f0802972fca9 e5d51c611a1015b8f4b9db25173a8b1ca441e048 kyle <ktseng122@gmail.com> 1632518357 -0400	commit: Corrected incorrect date display on time input
+e5d51c611a1015b8f4b9db25173a8b1ca441e048 81e2d61ea847f1edc7b77c523ec28cfaa9c20df9 kyle <ktseng122@gmail.com> 1632525832 -0400	commit: I think time works now
+81e2d61ea847f1edc7b77c523ec28cfaa9c20df9 954756ae277841e0a80a664e8078e1b3b2f7ac63 kyle <ktseng122@gmail.com> 1632772375 -0400	commit: Fixed all datetime-local value string inputs
+954756ae277841e0a80a664e8078e1b3b2f7ac63 48fa2516909195366c8aefe20c06601cb0f49a81 kyle <ktseng122@gmail.com> 1632779037 -0400	commit: Broken edit error validation
+48fa2516909195366c8aefe20c06601cb0f49a81 c5ae27a98e29c90f62326ec991dd3eefef581970 kyle <ktseng122@gmail.com> 1632780513 -0400	commit: Errors pushed
+c5ae27a98e29c90f62326ec991dd3eefef581970 c825d7ed8521690405378a680b858e26bdeb92f3 kyle <ktseng122@gmail.com> 1632783798 -0400	commit: Incomplete price validation
+c825d7ed8521690405378a680b858e26bdeb92f3 bc7ccf773fec2ae1d8894f5d45f9ce27a0c53e41 kyle <ktseng122@gmail.com> 1632784390 -0400	commit: Fixed all validation on both forms
+bc7ccf773fec2ae1d8894f5d45f9ce27a0c53e41 2c7b0c6cfe2784fd0f0886494b00018a52861a15 kyle <ktseng122@gmail.com> 1632784683 -0400	commit: Better price regex
+2c7b0c6cfe2784fd0f0886494b00018a52861a15 0084df423ce46382cde6d82fcc8ca188e3ad6374 kyle <ktseng122@gmail.com> 1632786620 -0400	commit: heroku stuff
+0084df423ce46382cde6d82fcc8ca188e3ad6374 4a7727b4330b04a0b9753605d3dfeefad9344d61 kyle <ktseng122@gmail.com> 1632860678 -0400	commit: Default image for urls with no image
+4a7727b4330b04a0b9753605d3dfeefad9344d61 6703a4bdba42400d8d9d52bc3423b50268f282c2 kyle <ktseng122@gmail.com> 1632860943 -0400	commit: Default image for event details page
+6703a4bdba42400d8d9d52bc3423b50268f282c2 e86ff923eecc31ef94fedfeb8797bb38d59692a9 kyle <ktseng122@gmail.com> 1632861213 -0400	commit: Fixed date prepopulating for event details
+e86ff923eecc31ef94fedfeb8797bb38d59692a9 6c4bda228b36f57338dd988c345ca169f41fed32 kyle <ktseng122@gmail.com> 1632870931 -0400	commit: Default image on tickets page and css
+6c4bda228b36f57338dd988c345ca169f41fed32 63e72b4ef1740c0f6979510b32b0f41af1cefb30 kyle <ktseng122@gmail.com> 1632872315 -0400	commit: added error handling for tickets registration

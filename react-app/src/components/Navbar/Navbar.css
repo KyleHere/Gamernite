@@ -1,0 +1,121 @@
+.entire_navbar{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+}
+
+.navbar_container{
+  background-color: white;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.384);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+  width: 100%;
+
+}
+
+.logo_img{
+  height:35px;
+}
+
+.left_navbar{
+  padding-left: 15px;
+}
+
+.right_navbar{
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 20px;
+}
+
+.upload_button{
+  padding: 10px;
+  background-color:white;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  min-width: 50px;
+  text-align: center;
+  /* margin-right: 15px; */
+}
+
+.upload_button:hover{
+  background-color: lightgray;
+}
+
+.profile_img{
+  /* padding-top: ; */
+  height:30px;
+  border:1px white solid;
+  border-radius: 20px;
+
+  /* padding-right: 10px; */
+}
+
+.profile_img:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login_navbar{
+  padding: 10px;
+  background-color:#F4E9CD;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+  margin-right: 15px;
+
+}
+
+.login_navbar:hover{
+  background-color:#EAD39A;
+}
+
+.signup_navbar{
+
+  margin-left: 15px;
+  padding: 10px;
+  background-color:#D7CFDD;
+  color: black;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 50px;
+  text-align: center;
+
+}
+
+.signup_navbar:hover{
+  background-color: #BEB2C8;
+}
+
+.signed_out{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  /* text-decoration: none; */
+}
+
+.signed_out :focus, :hover, :visited, :link, :active {
+  text-decoration: none;
+}
+
+.welcome-user{
+  /* padding-right: 10px; */
+  display:flex;
+  /* width: 200px; */
+}
+
+.username{
+  color:red
+}

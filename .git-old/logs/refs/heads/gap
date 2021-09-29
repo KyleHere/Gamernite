@@ -1,0 +1,28 @@
+0000000000000000000000000000000000000000 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632207124 -0400	branch: Created from HEAD
+ff477ac42893df8303a3f0583883da08fe710350 eceded619037d9495273dba0b95af65daf325a08 kyle <ktseng122@gmail.com> 1632208325 -0400	commit: added error handling for new and edit form
+eceded619037d9495273dba0b95af65daf325a08 ff477ac42893df8303a3f0583883da08fe710350 kyle <ktseng122@gmail.com> 1632208557 -0400	reset: moving to ff477ac42893df8303a3f0583883da08fe710350
+ff477ac42893df8303a3f0583883da08fe710350 d6e420afc79ac51ff7ae04759cb72dccb6263ff3 kyle <ktseng122@gmail.com> 1632208804 -0400	commit: added error handling for new and edit forms
+d6e420afc79ac51ff7ae04759cb72dccb6263ff3 9b02beb6a52604852c42e306bb23b2aa4b55067a kyle <ktseng122@gmail.com> 1632209343 -0400	commit: logout home redirect
+9b02beb6a52604852c42e306bb23b2aa4b55067a 7537d385705ce9cd8fc9fd987f4921784e273ef2 kyle <ktseng122@gmail.com> 1632210681 -0400	commit: Fixed upon event deletion, ticket boxes remained
+7537d385705ce9cd8fc9fd987f4921784e273ef2 b001edc8435e6e235920e86ec79297e4b2dab3a2 kyle <ktseng122@gmail.com> 1632351214 -0400	commit: Updated models and seeders
+b001edc8435e6e235920e86ec79297e4b2dab3a2 6414d985322a978772f66fc3de223f115cb4766e kyle <ktseng122@gmail.com> 1632352751 -0400	commit: temp
+6414d985322a978772f66fc3de223f115cb4766e b6691470e4c0a42e37d8ea10703ac6d07b6f1655 kyle <ktseng122@gmail.com> 1632429277 -0400	commit: Restored create functionality
+b6691470e4c0a42e37d8ea10703ac6d07b6f1655 5d39b5a15945eb84e85a4ed059294b20369fb7e6 kyle <ktseng122@gmail.com> 1632430270 -0400	commit: incomplete prepopulate time field
+5d39b5a15945eb84e85a4ed059294b20369fb7e6 87bad0c2d40bbbd87a0e5a5d9d2302d5b73c206e kyle <ktseng122@gmail.com> 1632433532 -0400	commit: Corrected edit prepopulating time
+87bad0c2d40bbbd87a0e5a5d9d2302d5b73c206e dd073fdac8629f8044ea0d7966e286e3683fff03 kyle <ktseng122@gmail.com> 1632438823 -0400	commit: Added more error handling for price and time
+dd073fdac8629f8044ea0d7966e286e3683fff03 ba81bce3cd61bd8b758aef1935ab13d61bc03945 kyle <ktseng122@gmail.com> 1632439322 -0400	commit: Heroku push
+ba81bce3cd61bd8b758aef1935ab13d61bc03945 ff65f5536f353c8900831943ded9f0802972fca9 kyle <ktseng122@gmail.com> 1632441137 -0400	commit: Fixed toFixed error
+ff65f5536f353c8900831943ded9f0802972fca9 e5d51c611a1015b8f4b9db25173a8b1ca441e048 kyle <ktseng122@gmail.com> 1632518357 -0400	commit: Corrected incorrect date display on time input
+e5d51c611a1015b8f4b9db25173a8b1ca441e048 81e2d61ea847f1edc7b77c523ec28cfaa9c20df9 kyle <ktseng122@gmail.com> 1632525832 -0400	commit: I think time works now
+81e2d61ea847f1edc7b77c523ec28cfaa9c20df9 954756ae277841e0a80a664e8078e1b3b2f7ac63 kyle <ktseng122@gmail.com> 1632772375 -0400	commit: Fixed all datetime-local value string inputs
+954756ae277841e0a80a664e8078e1b3b2f7ac63 48fa2516909195366c8aefe20c06601cb0f49a81 kyle <ktseng122@gmail.com> 1632779037 -0400	commit: Broken edit error validation
+48fa2516909195366c8aefe20c06601cb0f49a81 c5ae27a98e29c90f62326ec991dd3eefef581970 kyle <ktseng122@gmail.com> 1632780513 -0400	commit: Errors pushed
+c5ae27a98e29c90f62326ec991dd3eefef581970 c825d7ed8521690405378a680b858e26bdeb92f3 kyle <ktseng122@gmail.com> 1632783798 -0400	commit: Incomplete price validation
+c825d7ed8521690405378a680b858e26bdeb92f3 bc7ccf773fec2ae1d8894f5d45f9ce27a0c53e41 kyle <ktseng122@gmail.com> 1632784390 -0400	commit: Fixed all validation on both forms
+bc7ccf773fec2ae1d8894f5d45f9ce27a0c53e41 2c7b0c6cfe2784fd0f0886494b00018a52861a15 kyle <ktseng122@gmail.com> 1632784683 -0400	commit: Better price regex
+2c7b0c6cfe2784fd0f0886494b00018a52861a15 0084df423ce46382cde6d82fcc8ca188e3ad6374 kyle <ktseng122@gmail.com> 1632786620 -0400	commit: heroku stuff
+0084df423ce46382cde6d82fcc8ca188e3ad6374 4a7727b4330b04a0b9753605d3dfeefad9344d61 kyle <ktseng122@gmail.com> 1632860678 -0400	commit: Default image for urls with no image
+4a7727b4330b04a0b9753605d3dfeefad9344d61 6703a4bdba42400d8d9d52bc3423b50268f282c2 kyle <ktseng122@gmail.com> 1632860943 -0400	commit: Default image for event details page
+6703a4bdba42400d8d9d52bc3423b50268f282c2 e86ff923eecc31ef94fedfeb8797bb38d59692a9 kyle <ktseng122@gmail.com> 1632861213 -0400	commit: Fixed date prepopulating for event details
+e86ff923eecc31ef94fedfeb8797bb38d59692a9 6c4bda228b36f57338dd988c345ca169f41fed32 kyle <ktseng122@gmail.com> 1632870931 -0400	commit: Default image on tickets page and css
+6c4bda228b36f57338dd988c345ca169f41fed32 63e72b4ef1740c0f6979510b32b0f41af1cefb30 kyle <ktseng122@gmail.com> 1632872315 -0400	commit: added error handling for tickets registration

@@ -1,0 +1,93 @@
+.event_container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 95%;
+  margin-left: 25px;
+  padding: 0;
+}
+
+.event_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 0.5px white;
+  background-color: white;
+  height: 375px;
+  width: 350px;
+  margin: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.event_pic{
+  height: 250px;
+  width:350px;
+}
+
+.event_pic:before{
+  /* content: ' ';
+  display: block;
+  position: absolute;
+  height: 250px;
+  width: 350px;
+  background-image: url('https://static.thenounproject.com/png/340719-200.png'); */
+  /* cover */
+}
+
+.homepage_content{
+padding-top: 70px;
+}
+
+body{
+  background-color: #E7ECEF;
+}
+
+.event_card{
+  text-decoration: none;
+  color:black
+}
+
+.event_card:visited{
+  color: black
+}
+
+.event_info{
+  width: 100%;
+
+  /* width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; */
+  /* margin:0px; */
+}
+
+.event_p{
+  padding-top: 10px;
+  padding-left: 13px;
+  margin:0px
+}
+
+.welcome_banner{
+  height: 600px;
+  width: 100%;
+}
+
+.welcome_banner_img{
+  /* position:relative; */
+  height: 550px;
+  width: 100%;
+  object-fit:fill
+}
+
+.event_item:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.5);
+}
+
+.spacing{
+  height:100px;
+  margin-bottom: 200px;
+}
