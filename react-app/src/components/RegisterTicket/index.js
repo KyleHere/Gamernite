@@ -9,7 +9,7 @@ const RegisterTicketForm = ({ openTicketModal }) => {
   const user = useSelector((state) => state.session.user)
 
   const [num_ticket, setNumTickets] = useState("")
-  const [user_id, setUserId] = useState(user.id)
+  const [user_id, setUserId] = useState(user?.id)
   const [errors, setErrors] = useState([]);
   const { eventId } = useParams()
 
