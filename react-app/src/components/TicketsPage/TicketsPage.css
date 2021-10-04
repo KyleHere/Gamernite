@@ -15,7 +15,10 @@
 }
 
 .single_event_pic{
+  max-height: 220px;
   height: 220px;
+  width:250px;
+  max-width: 250px;
   object-fit: fill;
 }
 
