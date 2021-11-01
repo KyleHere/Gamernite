@@ -8,13 +8,11 @@ import './homepage.css'
 const Homepage = () => {
   const user = useSelector(state => state.session.user)
   const events = useSelector(state => Object.values(state.eventsReducer))
-  // const tickets = useSelector(state => Object.values(state.ticketsReducer))
   const dispatch = useDispatch();
 
 
 
   useEffect(() => {
-    console.log('SOMETHING HAPPENING ')
     dispatch(allEvents())
   }, [])
 

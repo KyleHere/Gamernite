@@ -17,7 +17,7 @@ const EventDetails = () => {
   const [showTicket, setShowTicket] = useState(false)
   const user = useSelector(state => state.session.user)
   const events = useSelector(state => Object.values(state.eventsReducer))
-  // console.log(events)
+
   const thisEvent = events?.find((event) => event.id === +eventId)
 
   let timeOfDay;

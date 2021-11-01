@@ -11,13 +11,13 @@ const TicketsPage = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const { userId } = useParams();
-  // console.log(userId)
+
   const user = useSelector(state => state.session.user)
   const tickets = useSelector(state => Object.values(state.ticketsReducer))
   const events = useSelector(state => Object.values(state.eventsReducer))
 
   const filtered = tickets.filter((ticket) => ticket?.user_id === user?.id)
-  console.log(filtered)
+
 
   useEffect(() => {
     dispatch(allTickets(userId))

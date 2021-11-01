@@ -27,7 +27,7 @@ function EditEventForm({ openModal }) {
   //to preview date
   let newMonth;
   let tester = String(newTime.getMonth() + 1)
-  console.log(newTime.getMonth() + 1)
+
   if (tester.length < 2 && tester.length > 0) {
     newMonth = `0${tester}`
 
@@ -54,7 +54,7 @@ function EditEventForm({ openModal }) {
 
   const today = new Date()
   const todayString = `${today.toISOString().split('T')[0]}T00:00`
-  // console.log(todayString)
+
 
   const [name, setName] = useState(event?.name)
   const [description, setDescription] = useState(event?.description)
@@ -65,7 +65,7 @@ function EditEventForm({ openModal }) {
   const [pic_url, setPic_Url] = useState(event?.pic_url)
   const [errors, setErrors] = useState([]);
 
-  // console.log(time)
+
 
   useEffect(() => {
     dispatch(allTickets(user.id))
