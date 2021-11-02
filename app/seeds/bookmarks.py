@@ -5,10 +5,16 @@ def seed_bookmarks():
     bookmarks1 = Bookmark(user_id="1", event_id="1")
     bookmarks2 = Bookmark(user_id="1", event_id="2")
     bookmarks3 = Bookmark(user_id="1", event_id="3")
+    bookmarks4 = Bookmark(user_id="2", event_id="1")
+    bookmarks5 = Bookmark(user_id="2", event_id="2")
+    bookmarks6 = Bookmark(user_id="3", event_id="1")
 
     db.session.add(bookmarks1)
     db.session.add(bookmarks2)
     db.session.add(bookmarks3)
+    db.session.add(bookmarks4)
+    db.session.add(bookmarks5)
+    db.session.add(bookmarks6)
 
     db.session.commit()
 
