@@ -1,4 +1,4 @@
-from .db import db
+from .db import db, environemnt, SCHEMA, add_prefix_for_prod
 from flask import jsonify
 from datetime import datetime
 from .user import User
@@ -7,12 +7,15 @@ from .user import User
 class Event(db.Model):
     __tablename__ = 'events'
 
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
     description = db.Column(db.String(500), nullable=False)
     time = db.Column(db.DateTime, default=datetime.now, nullable=False)
     price = db.Column(db.Float(decimal_return_scale=2), nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')))
     pic_url = db.Column(db.String(255), nullable=False)
     location = db.Column(db.String(255), nullable=False)
     timestamp = db.Column(db.DateTime, default=datetime.now)
