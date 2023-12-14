@@ -1,4 +1,4 @@
-from .db import db, environemnt, SCHEMA, add_prefix_for_prod
+from .db import db, environment, SCHEMA, add_prefix_for_prod
 from flask import jsonify
 from datetime import datetime
 from .user import User
